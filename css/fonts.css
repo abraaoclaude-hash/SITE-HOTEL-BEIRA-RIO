@@ -1,0 +1,88 @@
+/*
+  Font strategy
+  =============
+  The reference site (The Berkeley / Maybourne) uses licensed, commissioned typefaces
+  (Commuters Sans, Romie, Sang Bleu, Silk Serif...) exclusive to their brand.
+  We do NOT use those files here — they are not licensed for this project.
+
+  Instead we self-host open, freely-licensed fonts that fill the same visual role:
+    --font-display  -> big editorial serif headlines  (their Romie/Sang Bleu role)
+    --font-nav      -> tracked-out small caps nav/eyebrows (their Commuters Sans role)
+    --font-body     -> body copy (their Suisse Intl / Neutraface role)
+
+  If you later obtain a legal license for fonts you want to use instead (e.g. bought on
+  Adobe Fonts / MyFonts), drop the files into assets/fonts/ and add @font-face rules
+  here, then just repoint the variables below — nothing else in the CSS needs to change.
+*/
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('../assets/fonts/InstrumentSerif-Regular-ext.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('../assets/fonts/InstrumentSerif-Italic-ext.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/WorkSans-Regular-ext.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../assets/fonts/JosefinSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../assets/fonts/JosefinSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../assets/fonts/JosefinSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../assets/fonts/JosefinSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Josefin Sans: clean, elegant, geometric thin-stroke display font used for
+     the nav menu items and all major headlines, mirroring the reference
+     site's tall, narrow, editorial letterform look. */
+  --font-display: 'Josefin Sans', 'Instrument Serif', 'Times New Roman', serif;
+  --font-nav: 'Josefin Sans', 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Example of how to switch to a licensed custom font later:
+
+@font-face {
+  font-family: 'HotelDisplay';
+  src: url('../assets/fonts/YourLicensedFont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root { --font-display: 'HotelDisplay', 'Instrument Serif', serif; }
+
+*/

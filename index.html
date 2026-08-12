@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Beira Rio · Aquidauana, MS</title>
+<meta name="description" content="Hotel Beira Rio em Aquidauana-MS, à beira do rio, perto do Pantanal. Diárias com café da manhã incluído, pacotes para casal, família e pesca, e passeios pela natureza.">
+<link rel="icon" href="assets/img/logo.jpeg">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Shared torn-paper edge sprite: one irregular fractal path (generated via random midpoint
+     displacement, not a repeating sine wave) plus scattered "speckle" fragments, reused by every
+     .torn-edge instance below via <use> so all transitions share the exact same rough, torn-paper
+     texture and stay in sync if it's ever retuned. -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="torn-edge-bottom" d="M0,30 L2.3,28 L4.7,27.8 L7,26.6 L9.4,28.3 L11.7,28.2 L14.1,26.3 L16.4,25 L18.8,25.6 L21.1,24.4 L23.4,23.4 L25.8,24.8 L28.1,24.8 L30.5,23.6 L32.8,22 L35.2,22.1 L37.5,23.2 L39.8,22.4 L42.2,21.6 L44.5,22.4 L46.9,22.9 L49.2,23 L51.6,21.4 L53.9,21.1 L56.2,23.1 L58.6,23.4 L60.9,23.3 L63.3,23.2 L65.6,24.6 L68,22.4 L70.3,21.5 L72.7,20.3 L75,17.5 L77.3,16 L79.7,14.3 L82,11.4 L84.4,12.9 L86.7,15.1 L89.1,15.7 L91.4,17.8 L93.8,17.6 L96.1,17 L98.4,16.6 L100.8,17.9 L103.1,18.5 L105.5,18.3 L107.8,18.1 L110.2,18.9 L112.5,19.7 L114.8,19.4 L117.2,18 L119.5,17.6 L121.9,17.6 L124.2,16.4 L126.6,15 L128.9,14.3 L131.2,13.6 L133.6,13.6 L135.9,11.1 L138.3,11.9 L140.6,11.5 L143,14 L145.3,14.3 L147.7,15.6 L150,14.3 L152.3,14.8 L154.7,16.6 L157,15.8 L159.4,14.8 L161.7,15.6 L164.1,13.8 L166.4,14.4 L168.8,13 L171.1,12.5 L173.4,14.2 L175.8,13.7 L178.1,15.4 L180.5,14.6 L182.8,14.2 L185.2,14 L187.5,16.2 L189.8,15.1 L192.2,13.7 L194.5,11.9 L196.9,12.6 L199.2,10 L201.6,6.5 L203.9,8.3 L206.2,8.6 L208.6,10.8 L210.9,10.7 L213.3,11.6 L215.6,12.9 L218,13.1 L220.3,12 L222.7,10.7 L225,8.5 L227.3,6.7 L229.7,7 L232,8.7 L234.4,8.2 L236.7,9.1 L239.1,7.3 L241.4,8 L243.8,10.3 L246.1,12.7 L248.4,12.5 L250.8,11.6 L253.1,11.2 L255.5,11.7 L257.8,12.3 L260.2,14.2 L262.5,13.3 L264.8,13.8 L267.2,12.4 L269.5,12.3 L271.9,14.3 L274.2,14 L276.6,14 L278.9,13.8 L281.2,13.4 L283.6,11.7 L285.9,10.9 L288.3,10.7 L290.6,12.3 L293,12.8 L295.3,14.5 L297.7,16.1 L300,16.4 L302.3,16 L304.7,18.3 L307,17.5 L309.4,16.4 L311.7,17 L314.1,18 L316.4,16 L318.8,16.8 L321.1,16.1 L323.4,16.4 L325.8,15.8 L328.1,14.4 L330.5,14.3 L332.8,14.2 L335.2,13.7 L337.5,15.8 L339.8,16.5 L342.2,14.3 L344.5,15 L346.9,13.9 L349.2,12.5 L351.6,8.4 L353.9,5.9 L356.2,5.6 L358.6,7.7 L360.9,11.1 L363.3,11.4 L365.6,14.4 L368,16 L370.3,16 L372.7,16.1 L375,17.4 L377.3,17.5 L379.7,19.7 L382,19.6 L384.4,19.8 L386.7,20.5 L389.1,18.8 L391.4,19.9 L393.8,19.2 L396.1,18 L398.4,18.3 L400.8,17.9 L403.1,19.6 L405.5,22.5 L407.8,23.1 L410.2,23.8 L412.5,24.1 L414.8,25.3 L417.2,25.4 L419.5,23 L421.9,22.9 L424.2,22.7 L426.6,25.1 L428.9,25.4 L431.2,24.5 L433.6,24.3 L435.9,24.4 L438.3,21.9 L440.6,21.9 L443,23.4 L445.3,22.4 L447.7,21.8 L450,20.4 L452.3,22 L454.7,21.9 L457,20.4 L459.4,21.4 L461.7,23.7 L464.1,23.9 L466.4,25.1 L468.8,28.7 L471.1,31.1 L473.4,31.5 L475.8,27.5 L478.1,23.7 L480.5,20.3 L482.8,17.8 L485.2,15.5 L487.5,13 L489.8,13.1 L492.2,10.7 L494.5,10.8 L496.9,12.3 L499.2,10.2 L501.6,10.3 L503.9,11.3 L506.2,12.1 L508.6,11.4 L510.9,12.2 L513.3,12 L515.6,14 L518,12.8 L520.3,13.7 L522.7,13.2 L525,15.3 L527.3,15.9 L529.7,18.2 L532,18.4 L534.4,19.6 L536.7,20 L539.1,21.5 L541.4,21.3 L543.8,19.7 L546.1,19.8 L548.4,21.2 L550.8,22.1 L553.1,23.1 L555.5,23 L557.8,24.8 L560.2,23.4 L562.5,23 L564.8,23.1 L567.2,26 L569.5,24.8 L571.9,25.1 L574.2,24.1 L576.6,25.9 L578.9,25.2 L581.2,23.2 L583.6,22.7 L585.9,21.9 L588.3,21 L590.6,21.8 L593,21.5 L595.3,21.3 L597.7,23.4 L600,23 L602.3,21.2 L604.7,21.7 L607,23.1 L609.4,22.7 L611.7,22 L614.1,21.8 L616.4,22.6 L618.8,23.3 L621.1,22.8 L623.4,20.4 L625.8,19.8 L628.1,19.8 L630.5,19.6 L632.8,19.4 L635.2,19.2 L637.5,17.9 L639.8,20.8 L642.2,21 L644.5,20.4 L646.9,20.8 L649.2,22.1 L651.6,21.5 L653.9,21.1 L656.2,19.4 L658.6,20.2 L660.9,20.1 L663.3,20.3 L665.6,21 L668,20 L670.3,19.8 L672.7,17.3 L675,17.4 L677.3,16.2 L679.7,17.2 L682,14.6 L684.4,14.5 L686.7,14.6 L689.1,13.4 L691.4,13.7 L693.8,15.5 L696.1,14.6 L698.4,15.6 L700.8,13.8 L703.1,14.4 L705.5,16.9 L707.8,17.3 L710.2,18.2 L712.5,16.9 L714.8,18.5 L717.2,19.1 L719.5,18.5 L721.9,19.1 L724.2,20.1 L726.6,22.7 L728.9,22.9 L731.2,24.2 L733.6,23.7 L735.9,23.4 L738.3,22 L740.6,22.7 L743,22.2 L745.3,22.1 L747.7,22.4 L750,24.1 L752.3,25.4 L754.7,24.1 L757,24.3 L759.4,21.8 L761.7,21.1 L764.1,20.1 L766.4,19.1 L768.8,19.7 L771.1,21.9 L773.4,21.5 L775.8,20.6 L778.1,20.9 L780.5,21.5 L782.8,22.9 L785.2,20.6 L787.5,21.1 L789.8,20.5 L792.2,20.5 L794.5,20.6 L796.9,20.8 L799.2,21.2 L801.6,21.5 L803.9,21.5 L806.2,23.1 L808.6,23.7 L810.9,24.3 L813.3,21.7 L815.6,21.9 L818,22.8 L820.3,25 L822.7,24.5 L825,26.3 L827.3,25.5 L829.7,25.3 L832,24.8 L834.4,26.9 L836.7,25.2 L839.1,23.8 L841.4,22.1 L843.8,21.4 L846.1,17.2 L848.4,19.2 L850.8,22 L853.1,24.4 L855.5,27.6 L857.8,28.3 L860.2,28.1 L862.5,26.5 L864.8,27.6 L867.2,27.8 L869.5,27.8 L871.9,26.6 L874.2,26.8 L876.6,24.9 L878.9,25.1 L881.2,26 L883.6,27.4 L885.9,29.8 L888.3,31.7 L890.6,30.9 L893,30.9 L895.3,32.8 L897.7,32.5 L900,30.8 L902.3,32 L904.7,32.4 L907,31.2 L909.4,32.7 L911.7,33.3 L914.1,32 L916.4,33.4 L918.8,32.5 L921.1,33.2 L923.4,33.2 L925.8,34 L928.1,33.5 L930.5,31.4 L932.8,27.6 L935.2,25.1 L937.5,24.7 L939.8,20.9 L942.2,21.8 L944.5,24.7 L946.9,27.5 L949.2,31 L951.6,32.6 L953.9,31.7 L956.2,29 L958.6,30.7 L960.9,30.6 L963.3,31 L965.6,31 L968,32.1 L970.3,31 L972.7,31.5 L975,30.9 L977.3,31.4 L979.7,30.7 L982,28.1 L984.4,27 L986.7,25.8 L989.1,27.3 L991.4,26.6 L993.8,28.1 L996.1,28.3 L998.4,29.3 L1000.8,27.3 L1003.1,27.6 L1005.5,28 L1007.8,26.4 L1010.2,24.7 L1012.5,22.6 L1014.8,23 L1017.2,22.6 L1019.5,24.1 L1021.9,24.9 L1024.2,24.7 L1026.6,23.4 L1028.9,23.7 L1031.2,24 L1033.6,22.3 L1035.9,25.1 L1038.3,28.1 L1040.6,29.4 L1043,30.3 L1045.3,29.7 L1047.7,30.9 L1050,29 L1052.3,28.2 L1054.7,27.3 L1057,26.5 L1059.4,24.8 L1061.7,21.2 L1064.1,21.6 L1066.4,22.5 L1068.8,21.9 L1071.1,20.9 L1073.4,21.2 L1075.8,19.9 L1078.1,21.1 L1080.5,19.8 L1082.8,19.8 L1085.2,21.3 L1087.5,21.5 L1089.8,21.6 L1092.2,23.4 L1094.5,23.4 L1096.9,22 L1099.2,23.5 L1101.6,22.3 L1103.9,22.9 L1106.2,27.6 L1108.6,30.1 L1110.9,33.3 L1113.3,28.4 L1115.6,23.6 L1118,20.4 L1120.3,20.2 L1122.7,20.8 L1125,20 L1127.3,21.6 L1129.7,22.5 L1132,22.5 L1134.4,21.7 L1136.7,20.3 L1139.1,21.4 L1141.4,20.6 L1143.8,21.8 L1146.1,21.9 L1148.4,23.4 L1150.8,23.3 L1153.1,21.7 L1155.5,22.3 L1157.8,24.1 L1160.2,25.5 L1162.5,26.5 L1164.8,25 L1167.2,26.2 L1169.5,24.7 L1171.9,25.7 L1174.2,26.1 L1176.6,27.8 L1178.9,29.3 L1181.2,29.8 L1183.6,29 L1185.9,27.1 L1188.3,28.2 L1190.6,28.3 L1193,28 L1195.3,28.9 L1197.7,29.5 L1200,30 L1200,60 L0,60 Z"></path>
+    <path id="torn-edge-top" d="M0,30 L2.3,28 L4.7,27.8 L7,26.6 L9.4,28.3 L11.7,28.2 L14.1,26.3 L16.4,25 L18.8,25.6 L21.1,24.4 L23.4,23.4 L25.8,24.8 L28.1,24.8 L30.5,23.6 L32.8,22 L35.2,22.1 L37.5,23.2 L39.8,22.4 L42.2,21.6 L44.5,22.4 L46.9,22.9 L49.2,23 L51.6,21.4 L53.9,21.1 L56.2,23.1 L58.6,23.4 L60.9,23.3 L63.3,23.2 L65.6,24.6 L68,22.4 L70.3,21.5 L72.7,20.3 L75,17.5 L77.3,16 L79.7,14.3 L82,11.4 L84.4,12.9 L86.7,15.1 L89.1,15.7 L91.4,17.8 L93.8,17.6 L96.1,17 L98.4,16.6 L100.8,17.9 L103.1,18.5 L105.5,18.3 L107.8,18.1 L110.2,18.9 L112.5,19.7 L114.8,19.4 L117.2,18 L119.5,17.6 L121.9,17.6 L124.2,16.4 L126.6,15 L128.9,14.3 L131.2,13.6 L133.6,13.6 L135.9,11.1 L138.3,11.9 L140.6,11.5 L143,14 L145.3,14.3 L147.7,15.6 L150,14.3 L152.3,14.8 L154.7,16.6 L157,15.8 L159.4,14.8 L161.7,15.6 L164.1,13.8 L166.4,14.4 L168.8,13 L171.1,12.5 L173.4,14.2 L175.8,13.7 L178.1,15.4 L180.5,14.6 L182.8,14.2 L185.2,14 L187.5,16.2 L189.8,15.1 L192.2,13.7 L194.5,11.9 L196.9,12.6 L199.2,10 L201.6,6.5 L203.9,8.3 L206.2,8.6 L208.6,10.8 L210.9,10.7 L213.3,11.6 L215.6,12.9 L218,13.1 L220.3,12 L222.7,10.7 L225,8.5 L227.3,6.7 L229.7,7 L232,8.7 L234.4,8.2 L236.7,9.1 L239.1,7.3 L241.4,8 L243.8,10.3 L246.1,12.7 L248.4,12.5 L250.8,11.6 L253.1,11.2 L255.5,11.7 L257.8,12.3 L260.2,14.2 L262.5,13.3 L264.8,13.8 L267.2,12.4 L269.5,12.3 L271.9,14.3 L274.2,14 L276.6,14 L278.9,13.8 L281.2,13.4 L283.6,11.7 L285.9,10.9 L288.3,10.7 L290.6,12.3 L293,12.8 L295.3,14.5 L297.7,16.1 L300,16.4 L302.3,16 L304.7,18.3 L307,17.5 L309.4,16.4 L311.7,17 L314.1,18 L316.4,16 L318.8,16.8 L321.1,16.1 L323.4,16.4 L325.8,15.8 L328.1,14.4 L330.5,14.3 L332.8,14.2 L335.2,13.7 L337.5,15.8 L339.8,16.5 L342.2,14.3 L344.5,15 L346.9,13.9 L349.2,12.5 L351.6,8.4 L353.9,5.9 L356.2,5.6 L358.6,7.7 L360.9,11.1 L363.3,11.4 L365.6,14.4 L368,16 L370.3,16 L372.7,16.1 L375,17.4 L377.3,17.5 L379.7,19.7 L382,19.6 L384.4,19.8 L386.7,20.5 L389.1,18.8 L391.4,19.9 L393.8,19.2 L396.1,18 L398.4,18.3 L400.8,17.9 L403.1,19.6 L405.5,22.5 L407.8,23.1 L410.2,23.8 L412.5,24.1 L414.8,25.3 L417.2,25.4 L419.5,23 L421.9,22.9 L424.2,22.7 L426.6,25.1 L428.9,25.4 L431.2,24.5 L433.6,24.3 L435.9,24.4 L438.3,21.9 L440.6,21.9 L443,23.4 L445.3,22.4 L447.7,21.8 L450,20.4 L452.3,22 L454.7,21.9 L457,20.4 L459.4,21.4 L461.7,23.7 L464.1,23.9 L466.4,25.1 L468.8,28.7 L471.1,31.1 L473.4,31.5 L475.8,27.5 L478.1,23.7 L480.5,20.3 L482.8,17.8 L485.2,15.5 L487.5,13 L489.8,13.1 L492.2,10.7 L494.5,10.8 L496.9,12.3 L499.2,10.2 L501.6,10.3 L503.9,11.3 L506.2,12.1 L508.6,11.4 L510.9,12.2 L513.3,12 L515.6,14 L518,12.8 L520.3,13.7 L522.7,13.2 L525,15.3 L527.3,15.9 L529.7,18.2 L532,18.4 L534.4,19.6 L536.7,20 L539.1,21.5 L541.4,21.3 L543.8,19.7 L546.1,19.8 L548.4,21.2 L550.8,22.1 L553.1,23.1 L555.5,23 L557.8,24.8 L560.2,23.4 L562.5,23 L564.8,23.1 L567.2,26 L569.5,24.8 L571.9,25.1 L574.2,24.1 L576.6,25.9 L578.9,25.2 L581.2,23.2 L583.6,22.7 L585.9,21.9 L588.3,21 L590.6,21.8 L593,21.5 L595.3,21.3 L597.7,23.4 L600,23 L602.3,21.2 L604.7,21.7 L607,23.1 L609.4,22.7 L611.7,22 L614.1,21.8 L616.4,22.6 L618.8,23.3 L621.1,22.8 L623.4,20.4 L625.8,19.8 L628.1,19.8 L630.5,19.6 L632.8,19.4 L635.2,19.2 L637.5,17.9 L639.8,20.8 L642.2,21 L644.5,20.4 L646.9,20.8 L649.2,22.1 L651.6,21.5 L653.9,21.1 L656.2,19.4 L658.6,20.2 L660.9,20.1 L663.3,20.3 L665.6,21 L668,20 L670.3,19.8 L672.7,17.3 L675,17.4 L677.3,16.2 L679.7,17.2 L682,14.6 L684.4,14.5 L686.7,14.6 L689.1,13.4 L691.4,13.7 L693.8,15.5 L696.1,14.6 L698.4,15.6 L700.8,13.8 L703.1,14.4 L705.5,16.9 L707.8,17.3 L710.2,18.2 L712.5,16.9 L714.8,18.5 L717.2,19.1 L719.5,18.5 L721.9,19.1 L724.2,20.1 L726.6,22.7 L728.9,22.9 L731.2,24.2 L733.6,23.7 L735.9,23.4 L738.3,22 L740.6,22.7 L743,22.2 L745.3,22.1 L747.7,22.4 L750,24.1 L752.3,25.4 L754.7,24.1 L757,24.3 L759.4,21.8 L761.7,21.1 L764.1,20.1 L766.4,19.1 L768.8,19.7 L771.1,21.9 L773.4,21.5 L775.8,20.6 L778.1,20.9 L780.5,21.5 L782.8,22.9 L785.2,20.6 L787.5,21.1 L789.8,20.5 L792.2,20.5 L794.5,20.6 L796.9,20.8 L799.2,21.2 L801.6,21.5 L803.9,21.5 L806.2,23.1 L808.6,23.7 L810.9,24.3 L813.3,21.7 L815.6,21.9 L818,22.8 L820.3,25 L822.7,24.5 L825,26.3 L827.3,25.5 L829.7,25.3 L832,24.8 L834.4,26.9 L836.7,25.2 L839.1,23.8 L841.4,22.1 L843.8,21.4 L846.1,17.2 L848.4,19.2 L850.8,22 L853.1,24.4 L855.5,27.6 L857.8,28.3 L860.2,28.1 L862.5,26.5 L864.8,27.6 L867.2,27.8 L869.5,27.8 L871.9,26.6 L874.2,26.8 L876.6,24.9 L878.9,25.1 L881.2,26 L883.6,27.4 L885.9,29.8 L888.3,31.7 L890.6,30.9 L893,30.9 L895.3,32.8 L897.7,32.5 L900,30.8 L902.3,32 L904.7,32.4 L907,31.2 L909.4,32.7 L911.7,33.3 L914.1,32 L916.4,33.4 L918.8,32.5 L921.1,33.2 L923.4,33.2 L925.8,34 L928.1,33.5 L930.5,31.4 L932.8,27.6 L935.2,25.1 L937.5,24.7 L939.8,20.9 L942.2,21.8 L944.5,24.7 L946.9,27.5 L949.2,31 L951.6,32.6 L953.9,31.7 L956.2,29 L958.6,30.7 L960.9,30.6 L963.3,31 L965.6,31 L968,32.1 L970.3,31 L972.7,31.5 L975,30.9 L977.3,31.4 L979.7,30.7 L982,28.1 L984.4,27 L986.7,25.8 L989.1,27.3 L991.4,26.6 L993.8,28.1 L996.1,28.3 L998.4,29.3 L1000.8,27.3 L1003.1,27.6 L1005.5,28 L1007.8,26.4 L1010.2,24.7 L1012.5,22.6 L1014.8,23 L1017.2,22.6 L1019.5,24.1 L1021.9,24.9 L1024.2,24.7 L1026.6,23.4 L1028.9,23.7 L1031.2,24 L1033.6,22.3 L1035.9,25.1 L1038.3,28.1 L1040.6,29.4 L1043,30.3 L1045.3,29.7 L1047.7,30.9 L1050,29 L1052.3,28.2 L1054.7,27.3 L1057,26.5 L1059.4,24.8 L1061.7,21.2 L1064.1,21.6 L1066.4,22.5 L1068.8,21.9 L1071.1,20.9 L1073.4,21.2 L1075.8,19.9 L1078.1,21.1 L1080.5,19.8 L1082.8,19.8 L1085.2,21.3 L1087.5,21.5 L1089.8,21.6 L1092.2,23.4 L1094.5,23.4 L1096.9,22 L1099.2,23.5 L1101.6,22.3 L1103.9,22.9 L1106.2,27.6 L1108.6,30.1 L1110.9,33.3 L1113.3,28.4 L1115.6,23.6 L1118,20.4 L1120.3,20.2 L1122.7,20.8 L1125,20 L1127.3,21.6 L1129.7,22.5 L1132,22.5 L1134.4,21.7 L1136.7,20.3 L1139.1,21.4 L1141.4,20.6 L1143.8,21.8 L1146.1,21.9 L1148.4,23.4 L1150.8,23.3 L1153.1,21.7 L1155.5,22.3 L1157.8,24.1 L1160.2,25.5 L1162.5,26.5 L1164.8,25 L1167.2,26.2 L1169.5,24.7 L1171.9,25.7 L1174.2,26.1 L1176.6,27.8 L1178.9,29.3 L1181.2,29.8 L1183.6,29 L1185.9,27.1 L1188.3,28.2 L1190.6,28.3 L1193,28 L1195.3,28.9 L1197.7,29.5 L1200,30 L1200,0 L0,0 Z"></path>
+    <g id="torn-edge-specks-bottom">
+      <circle cx="471.3" cy="16.6" r="1.5"/>
+      <circle cx="116.8" cy="14.8" r="1.2"/>
+      <circle cx="691.2" cy="2.3" r="1.4"/>
+      <circle cx="1044.8" cy="24.7" r="0.9"/>
+      <circle cx="875.2" cy="13.7" r="1.2"/>
+      <circle cx="967.0" cy="29.4" r="1.7"/>
+      <circle cx="501.6" cy="0.5" r="2.1"/>
+      <circle cx="638.6" cy="14.3" r="1.6"/>
+      <circle cx="973.2" cy="24.0" r="2.5"/>
+      <circle cx="518.4" cy="6.7" r="0.7"/>
+      <circle cx="856.6" cy="17.7" r="1.0"/>
+      <circle cx="81.2" cy="6.1" r="2.3"/>
+      <circle cx="972.5" cy="20.3" r="1.5"/>
+      <circle cx="1135.1" cy="9.3" r="1.8"/>
+      <circle cx="435.9" cy="14.1" r="0.7"/>
+      <circle cx="196.4" cy="0.5" r="1.8"/>
+      <circle cx="1063.4" cy="21.4" r="2.2"/>
+      <circle cx="1107.4" cy="19.3" r="1.1"/>
+      <circle cx="483.3" cy="7.6" r="1.6"/>
+      <circle cx="327.8" cy="10.4" r="1.4"/>
+      <circle cx="894.8" cy="22.2" r="2.1"/>
+      <circle cx="838.6" cy="19.5" r="2.1"/>
+    </g>
+    <g id="torn-edge-specks-top">
+      <circle cx="925.2" cy="40.1" r="1.1"/>
+      <circle cx="959.5" cy="38.8" r="2.5"/>
+      <circle cx="89.2" cy="18.8" r="1.2"/>
+      <circle cx="463.8" cy="27.3" r="1.0"/>
+      <circle cx="1118.6" cy="35.5" r="2.1"/>
+      <circle cx="598.3" cy="28.6" r="2.5"/>
+      <circle cx="1178.5" cy="32.3" r="2.6"/>
+      <circle cx="233.5" cy="12.5" r="1.1"/>
+      <circle cx="478.3" cy="21.3" r="1.2"/>
+      <circle cx="472.7" cy="36.3" r="2.6"/>
+      <circle cx="837.7" cy="27.6" r="2.5"/>
+      <circle cx="587.0" cy="34.4" r="2.0"/>
+      <circle cx="919.8" cy="44.3" r="1.4"/>
+      <circle cx="977.9" cy="36.7" r="1.4"/>
+      <circle cx="822.7" cy="29.9" r="1.4"/>
+      <circle cx="197.7" cy="27.3" r="1.5"/>
+      <circle cx="759.3" cy="33.1" r="1.1"/>
+      <circle cx="1203.2" cy="35.1" r="2.1"/>
+      <circle cx="307.7" cy="27.5" r="1.7"/>
+      <circle cx="1049.3" cy="29.4" r="1.4"/>
+      <circle cx="1063.7" cy="30.9" r="0.8"/>
+      <circle cx="237.7" cy="19.7" r="2.0"/>
+    </g>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#topo">
+      <img src="assets/img/logo.jpeg" alt="Hotel Beira Rio - logo com sol nascente e silhueta de ponte" width="44" height="44" class="nav__logo">
+      <span class="nav__brand-text">Hotel Beira Rio</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#topo">Início</a>
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#cafe">Sabores</a>
+      <a href="#experiencias">Experiências</a>
+      <a href="#faq">Perguntas Frequentes</a>
+      <a href="#reservar">Contato</a>
+      <a href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio." class="nav__cta" target="_blank" rel="noopener">Consultar Disponibilidade</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===== 1. HERO ===== -->
+  <section id="topo" class="hero">
+    <img src="assets/img/hero-rio.jpg" alt="Rio e ponte ao entardecer em Aquidauana, vista às margens do Hotel Beira Rio" class="hero__img" width="1920" height="1280" fetchpriority="high">
+    <div class="hero__scrim"></div>
+    <div class="hero__content reveal">
+      <h1 class="hero__title">À Beira do Rio, à Beira de Tudo</h1>
+      <p class="hero__subtitle">Hospedagem simples e acolhedora, a caminho do Pantanal</p>
+    </div>
+    <div class="torn-edge torn-edge--to-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
+    </div>
+  </section>
+
+  <!-- ===== 2. WELCOME / BOAS-VINDAS ===== -->
+  <section id="boas-vindas" class="section boas-vindas">
+    <div class="container reveal">
+      <h2 class="section-title">Bem-vindo ao Hotel Beira Rio</h2>
+      <p class="lede">
+        O nome Hotel Beira Rio nasceu do lugar onde estamos: literalmente às margens do rio Aquidauana,
+        na porta de entrada do Pantanal sul-mato-grossense. Aqui você encontra hospedagem simples,
+        limpa e de bom preço, pensada para quem vem pescar, conhecer a fauna da região, participar de
+        um evento em família ou apenas descansar depois de um dia de estrada. Sem luxo desnecessário,
+        sem promessas exageradas — só o essencial bem feito, com a hospitalidade de quem vive à beira do rio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 3. FULL-BLEED PHOTO + CTA ===== -->
+  <section class="photo-cta">
+    <img src="assets/img/fachada-real.jpg" alt="Fachada real do Hotel Beira Rio em Aquidauana-MS" class="photo-cta__img" loading="lazy" width="1920" height="1100">
+    <div class="photo-cta__scrim"></div>
+    <div class="photo-cta__content reveal">
+      <a class="btn btn--frame" href="#acomodacoes">Ver Acomodações</a>
+    </div>
+    <div class="torn-edge torn-edge--to-bg torn-edge--top" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
+    </div>
+    <div class="torn-edge torn-edge--to-white" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
+    </div>
+  </section>
+
+  <!-- ===== 5. CONFORTO PARA DESCANSAR (Relax and Unwind) ===== -->
+  <section id="acomodacoes" class="section section--tint conforto">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Acomodações</p>
+        <h2 class="section-title">Conforto para Descansar</h2>
+        <p class="lede">Quartos simples, limpos e aconchegantes — o essencial bem feito, para dormir bem depois de um dia de estrada, pesca ou passeio pelo Pantanal.</p>
+      </div>
+
+      <div class="room-gallery reveal">
+        <img src="assets/img/feat-1.jpg" alt="Ambiente de hospedagem do Hotel Beira Rio" loading="lazy" width="1200" height="800" class="room-gallery__img room-gallery__img--wide">
+        <img src="assets/img/feat-2.jpg" alt="Detalhe de acomodação do Hotel Beira Rio" loading="lazy" width="800" height="800" class="room-gallery__img">
+        <img src="assets/img/pantanal-serra.jpg" alt="Serra e paisagem natural do entorno de Aquidauana" loading="lazy" width="800" height="800" class="room-gallery__img">
+      </div>
+
+      <p class="section-sub reveal">Todas as diárias incluem café da manhã. Preços por diária, sujeitos a confirmação na reserva.</p>
+
+      <div class="rooms">
+        <article class="room-card reveal">
+          <h3>Cama de casal individual</h3>
+          <p class="room-card__price">R$ 155<span>/diária</span></p>
+          <p class="room-card__desc">Ideal para quem viaja sozinho ou em casal, com cama de casal e café da manhã incluído.</p>
+          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20casal%20individual%20(R%24155).">Consultar disponibilidade</a>
+        </article>
+        <article class="room-card reveal">
+          <h3>Quarto Duplo</h3>
+          <p class="room-card__price">R$ 199<span>/diária</span></p>
+          <p class="room-card__desc">Para duas pessoas, com café da manhã incluído. Ótimo para quem viaja em dupla.</p>
+          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20duplo%20(R%24199).">Consultar disponibilidade</a>
+        </article>
+        <article class="room-card reveal">
+          <h3>Quarto Triplo</h3>
+          <p class="room-card__price">R$ 255<span>/diária</span></p>
+          <p class="room-card__desc">Acomoda três pessoas, com café da manhã incluído. Boa opção para amigos ou pequenas famílias.</p>
+          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20triplo%20(R%24255).">Consultar disponibilidade</a>
+        </article>
+        <article class="room-card reveal">
+          <h3>Quarto Quádruplo</h3>
+          <p class="room-card__price">R$ 299<span>/diária</span></p>
+          <p class="room-card__desc">Para até quatro pessoas, com café da manhã incluído. Perfeito para famílias.</p>
+          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20qu%C3%A1druplo%20(R%24299).">Consultar disponibilidade</a>
+        </article>
+      </div>
+
+      <div class="section-head section-head--mid reveal">
+        <p class="eyebrow">Pacotes</p>
+        <h2 class="section-title">Estadias pensadas para cada tipo de viagem</h2>
+      </div>
+      <div class="packages">
+        <article class="package-card reveal">
+          <h3>Pacote Casal</h3>
+          <p class="package-card__meta">2 noites · Quarto duplo</p>
+          <p class="package-card__price">R$ 380</p>
+          <p class="room-card__desc">Duas noites a dois, com café da manhã incluído todos os dias.</p>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Casal%20(2%20noites%2C%20R%24380).">Reservar pacote</a>
+        </article>
+        <article class="package-card reveal">
+          <h3>Pacote Família</h3>
+          <p class="package-card__meta">2 noites · Quarto quádruplo</p>
+          <p class="package-card__price">R$ 560</p>
+          <p class="room-card__desc">Duas noites para a família toda, com café da manhã incluído todos os dias.</p>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Fam%C3%ADlia%20(2%20noites%2C%20R%24560).">Reservar pacote</a>
+        </article>
+        <article class="package-card reveal">
+          <h3>Pacote Pescador / Fim de Semana</h3>
+          <p class="package-card__meta">3 noites · Quarto triplo</p>
+          <p class="package-card__price">R$ 720</p>
+          <p class="room-card__desc">Três noites completas para curtir a pesca e a natureza da região com tranquilidade.</p>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Pescador%2FFim%20de%20Semana%20(3%20noites%2C%20R%24720).">Reservar pacote</a>
+        </article>
+      </div>
+
+      <div class="conforto__cta reveal">
+        <a class="btn btn--outline" href="#acomodacoes">Ver Quartos e Diárias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. O QUE DIZEM NOSSOS HÓSPEDES (Guest Reviews) ===== -->
+  <!-- Ainda não temos depoimentos reais de hóspedes coletados. Nenhuma citação ou nome foi inventado aqui —
+       a seção fica visualmente pronta e deve ser preenchida assim que tivermos avaliações reais (Google/Instagram/WhatsApp). -->
+  <section id="depoimentos" class="section depoimentos">
+    <div class="container reveal">
+      <p class="eyebrow">Hóspedes</p>
+      <h2 class="section-title">O que dizem nossos hóspedes</h2>
+      <p class="lede">Em breve, histórias reais de quem já se hospedou à beira do rio.</p>
+      <div class="depoimentos__card">
+        <img src="assets/img/nb-rio.jpg" alt="Rio Aquidauana visto da margem, próximo ao Hotel Beira Rio" loading="lazy" width="900" height="700">
+        <!-- Depoimento real pendente de coleta com hóspedes. -->
+      </div>
+      <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20estadia%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Reserve sua Estadia</a>
+    </div>
+  </section>
+
+  <!-- ===== 7. CAFÉ DA MANHÃ INCLUÍDO (Dining) ===== -->
+  <!-- Ainda não temos foto real do café da manhã servido pelo hotel; usamos um bloco de cor/textura da marca em vez de inventar uma imagem. -->
+  <section id="cafe" class="cafe-block">
+    <div class="cafe-block__content reveal">
+      <p class="eyebrow eyebrow--light">Sabores</p>
+      <h2 class="section-title section-title--light">Café da Manhã Incluído</h2>
+      <p class="lede lede--light">Toda diária no Hotel Beira Rio já inclui café da manhã — o combustível para quem vai sair cedo para pescar, seguir viagem para o Pantanal ou simplesmente aproveitar Aquidauana com calma, sem custo extra e sem letras miúdas.</p>
+      <a class="btn btn--frame" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20caf%C3%A9%20da%20manh%C3%A3%20do%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Saiba Mais no WhatsApp</a>
+    </div>
+    <div class="torn-edge torn-edge--to-white torn-edge--top" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
+    </div>
+    <div class="torn-edge torn-edge--to-white" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
+    </div>
+  </section>
+
+  <!-- ===== 8. LOCALIZAÇÃO PRIVILEGIADA (Amazing Location) ===== -->
+  <!-- Endereço exato e mapa incorporável ainda não confirmados com o cliente; usamos a grade de fotos da região em vez de um mapa. -->
+  <section id="localizacao" class="section section--tint localizacao">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experiências</p>
+        <h2 class="section-title">Localização Privilegiada</h2>
+        <p class="lede">Aquidauana é cidade histórica às margens do rio, cercada por serras e a caminho do Pantanal sul-mato-grossense — araras, jacarés, capivaras e a pesca esportiva fazem parte da rotina de quem visita a região.</p>
+      </div>
+      <div class="nb-grid reveal">
+        <img src="assets/img/nb-rio.jpg" alt="Rio Aquidauana visto da margem" loading="lazy" width="500" height="500">
+        <img src="assets/img/nb-serra.jpg" alt="Serra próxima a Aquidauana-MS" loading="lazy" width="500" height="500">
+        <img src="assets/img/nb-pantanal.jpg" alt="Paisagem típica do Pantanal sul-mato-grossense" loading="lazy" width="500" height="500">
+        <img src="assets/img/nb-arara.jpg" alt="Arara em ambiente natural perto de Aquidauana" loading="lazy" width="500" height="500">
+        <img src="assets/img/nb-jaguar.jpg" alt="Onça-pintada em habitat natural da região" loading="lazy" width="500" height="500">
+        <img src="assets/img/nb-sunset.jpg" alt="Pôr do sol sobre o rio em Aquidauana" loading="lazy" width="500" height="500">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. RESERVE SUA ESTADIA (Final CTA + form + footer) ===== -->
+  <section id="reservar" class="reservar-final">
+    <img src="assets/img/pantanal-serra.jpg" alt="Serra e paisagem natural do entorno de Aquidauana ao entardecer" class="reservar-final__img" loading="lazy" width="1920" height="1200">
+    <div class="reservar-final__scrim"></div>
+    <div class="torn-edge torn-edge--to-white torn-edge--top" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
+    </div>
+    <div class="container reservar-final__content reveal">
+      <img src="assets/img/logo.jpeg" alt="Hotel Beira Rio - logo" width="72" height="72" class="reservar-final__logo">
+      <p class="eyebrow eyebrow--light">Contato</p>
+      <h2 class="section-title section-title--light">Reserve Sua Estadia</h2>
+      <p class="lede lede--light">Nossa reserva é feita diretamente pelo WhatsApp — rápido, simples e sem burocracia.</p>
+
+      <!-- Formulário de datas é apenas visual/estrutural por enquanto: não há motor de reservas real integrado.
+           O envio redireciona para o WhatsApp com uma mensagem pré-preenchida (incluindo as datas escolhidas,
+           quando informadas). Substituir por integração real (Cloudbeds ou similar) quando o hotel contratar um motor de reservas. -->
+      <form class="booking-form" id="bookingForm">
+        <div class="booking-form__field">
+          <label for="checkin">Check-in</label>
+          <input type="date" id="checkin" name="checkin">
+        </div>
+        <div class="booking-form__field">
+          <label for="checkout">Check-out</label>
+          <input type="date" id="checkout" name="checkout">
+        </div>
+        <button type="submit" class="btn btn--sun">Verificar Disponibilidade</button>
+      </form>
+      <p class="phone-plain">+55 67 99340-9398</p>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <p class="footer__heading">Links Úteis</p>
+          <a href="#acomodacoes">Acomodações</a>
+          <a href="#cafe">Sabores</a>
+          <a href="#localizacao">Experiências</a>
+          <a href="#faq">Perguntas Frequentes</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Contato</p>
+          <!-- Endereço exato a confirmar com o cliente antes de publicar. -->
+          <p class="footer__text">Aquidauana, MS — endereço a confirmar</p>
+          <a href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">+55 67 99340-9398</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Redes Sociais</p>
+          <!-- Handle do Instagram a confirmar com o cliente; usando placeholder genérico até validação. -->
+          <a href="https://instagram.com/hotelbeirario" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 Hotel Beira Rio · Aquidauana, MS — Todos os direitos reservados</p>
+    </footer>
+  </section>
+
+  <!-- ===== FAQ (Perguntas Frequentes — referenced by nav) ===== -->
+  <section id="faq" class="section faq">
+    <div class="container reveal">
+      <p class="eyebrow">Perguntas Frequentes</p>
+      <h2 class="section-title">Dúvidas Comuns</h2>
+      <div class="faq__list">
+        <details>
+          <summary>Como faço para reservar?</summary>
+          <p>Reservas são feitas diretamente pelo WhatsApp: (67) 99340-9398. Envie as datas desejadas e o tipo de quarto que prefere.</p>
+        </details>
+        <details>
+          <summary>O café da manhã está incluído?</summary>
+          <p>Sim, todas as diárias já incluem café da manhã, sem custo extra.</p>
+        </details>
+        <details>
+          <summary>Vocês oferecem pacotes para pesca?</summary>
+          <p>Sim, temos o Pacote Pescador / Fim de Semana com 3 noites em quarto triplo por R$ 720.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
