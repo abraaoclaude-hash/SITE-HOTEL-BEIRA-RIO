@@ -7,68 +7,9 @@
 <meta name="description" content="Hotel Beira Rio em Aquidauana-MS, à beira do rio, perto do Pantanal. Diárias com café da manhã incluído, pacotes para casal, família e pesca, e passeios pela natureza.">
 <link rel="icon" href="assets/img/logo.jpeg">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
-
-<!-- Shared torn-paper edge sprite: one irregular fractal path (generated via random midpoint
-     displacement, not a repeating sine wave) plus scattered "speckle" fragments, reused by every
-     .torn-edge instance below via <use> so all transitions share the exact same rough, torn-paper
-     texture and stay in sync if it's ever retuned. -->
-<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path id="torn-edge-bottom" d="M0,30 L2.3,28 L4.7,27.8 L7,26.6 L9.4,28.3 L11.7,28.2 L14.1,26.3 L16.4,25 L18.8,25.6 L21.1,24.4 L23.4,23.4 L25.8,24.8 L28.1,24.8 L30.5,23.6 L32.8,22 L35.2,22.1 L37.5,23.2 L39.8,22.4 L42.2,21.6 L44.5,22.4 L46.9,22.9 L49.2,23 L51.6,21.4 L53.9,21.1 L56.2,23.1 L58.6,23.4 L60.9,23.3 L63.3,23.2 L65.6,24.6 L68,22.4 L70.3,21.5 L72.7,20.3 L75,17.5 L77.3,16 L79.7,14.3 L82,11.4 L84.4,12.9 L86.7,15.1 L89.1,15.7 L91.4,17.8 L93.8,17.6 L96.1,17 L98.4,16.6 L100.8,17.9 L103.1,18.5 L105.5,18.3 L107.8,18.1 L110.2,18.9 L112.5,19.7 L114.8,19.4 L117.2,18 L119.5,17.6 L121.9,17.6 L124.2,16.4 L126.6,15 L128.9,14.3 L131.2,13.6 L133.6,13.6 L135.9,11.1 L138.3,11.9 L140.6,11.5 L143,14 L145.3,14.3 L147.7,15.6 L150,14.3 L152.3,14.8 L154.7,16.6 L157,15.8 L159.4,14.8 L161.7,15.6 L164.1,13.8 L166.4,14.4 L168.8,13 L171.1,12.5 L173.4,14.2 L175.8,13.7 L178.1,15.4 L180.5,14.6 L182.8,14.2 L185.2,14 L187.5,16.2 L189.8,15.1 L192.2,13.7 L194.5,11.9 L196.9,12.6 L199.2,10 L201.6,6.5 L203.9,8.3 L206.2,8.6 L208.6,10.8 L210.9,10.7 L213.3,11.6 L215.6,12.9 L218,13.1 L220.3,12 L222.7,10.7 L225,8.5 L227.3,6.7 L229.7,7 L232,8.7 L234.4,8.2 L236.7,9.1 L239.1,7.3 L241.4,8 L243.8,10.3 L246.1,12.7 L248.4,12.5 L250.8,11.6 L253.1,11.2 L255.5,11.7 L257.8,12.3 L260.2,14.2 L262.5,13.3 L264.8,13.8 L267.2,12.4 L269.5,12.3 L271.9,14.3 L274.2,14 L276.6,14 L278.9,13.8 L281.2,13.4 L283.6,11.7 L285.9,10.9 L288.3,10.7 L290.6,12.3 L293,12.8 L295.3,14.5 L297.7,16.1 L300,16.4 L302.3,16 L304.7,18.3 L307,17.5 L309.4,16.4 L311.7,17 L314.1,18 L316.4,16 L318.8,16.8 L321.1,16.1 L323.4,16.4 L325.8,15.8 L328.1,14.4 L330.5,14.3 L332.8,14.2 L335.2,13.7 L337.5,15.8 L339.8,16.5 L342.2,14.3 L344.5,15 L346.9,13.9 L349.2,12.5 L351.6,8.4 L353.9,5.9 L356.2,5.6 L358.6,7.7 L360.9,11.1 L363.3,11.4 L365.6,14.4 L368,16 L370.3,16 L372.7,16.1 L375,17.4 L377.3,17.5 L379.7,19.7 L382,19.6 L384.4,19.8 L386.7,20.5 L389.1,18.8 L391.4,19.9 L393.8,19.2 L396.1,18 L398.4,18.3 L400.8,17.9 L403.1,19.6 L405.5,22.5 L407.8,23.1 L410.2,23.8 L412.5,24.1 L414.8,25.3 L417.2,25.4 L419.5,23 L421.9,22.9 L424.2,22.7 L426.6,25.1 L428.9,25.4 L431.2,24.5 L433.6,24.3 L435.9,24.4 L438.3,21.9 L440.6,21.9 L443,23.4 L445.3,22.4 L447.7,21.8 L450,20.4 L452.3,22 L454.7,21.9 L457,20.4 L459.4,21.4 L461.7,23.7 L464.1,23.9 L466.4,25.1 L468.8,28.7 L471.1,31.1 L473.4,31.5 L475.8,27.5 L478.1,23.7 L480.5,20.3 L482.8,17.8 L485.2,15.5 L487.5,13 L489.8,13.1 L492.2,10.7 L494.5,10.8 L496.9,12.3 L499.2,10.2 L501.6,10.3 L503.9,11.3 L506.2,12.1 L508.6,11.4 L510.9,12.2 L513.3,12 L515.6,14 L518,12.8 L520.3,13.7 L522.7,13.2 L525,15.3 L527.3,15.9 L529.7,18.2 L532,18.4 L534.4,19.6 L536.7,20 L539.1,21.5 L541.4,21.3 L543.8,19.7 L546.1,19.8 L548.4,21.2 L550.8,22.1 L553.1,23.1 L555.5,23 L557.8,24.8 L560.2,23.4 L562.5,23 L564.8,23.1 L567.2,26 L569.5,24.8 L571.9,25.1 L574.2,24.1 L576.6,25.9 L578.9,25.2 L581.2,23.2 L583.6,22.7 L585.9,21.9 L588.3,21 L590.6,21.8 L593,21.5 L595.3,21.3 L597.7,23.4 L600,23 L602.3,21.2 L604.7,21.7 L607,23.1 L609.4,22.7 L611.7,22 L614.1,21.8 L616.4,22.6 L618.8,23.3 L621.1,22.8 L623.4,20.4 L625.8,19.8 L628.1,19.8 L630.5,19.6 L632.8,19.4 L635.2,19.2 L637.5,17.9 L639.8,20.8 L642.2,21 L644.5,20.4 L646.9,20.8 L649.2,22.1 L651.6,21.5 L653.9,21.1 L656.2,19.4 L658.6,20.2 L660.9,20.1 L663.3,20.3 L665.6,21 L668,20 L670.3,19.8 L672.7,17.3 L675,17.4 L677.3,16.2 L679.7,17.2 L682,14.6 L684.4,14.5 L686.7,14.6 L689.1,13.4 L691.4,13.7 L693.8,15.5 L696.1,14.6 L698.4,15.6 L700.8,13.8 L703.1,14.4 L705.5,16.9 L707.8,17.3 L710.2,18.2 L712.5,16.9 L714.8,18.5 L717.2,19.1 L719.5,18.5 L721.9,19.1 L724.2,20.1 L726.6,22.7 L728.9,22.9 L731.2,24.2 L733.6,23.7 L735.9,23.4 L738.3,22 L740.6,22.7 L743,22.2 L745.3,22.1 L747.7,22.4 L750,24.1 L752.3,25.4 L754.7,24.1 L757,24.3 L759.4,21.8 L761.7,21.1 L764.1,20.1 L766.4,19.1 L768.8,19.7 L771.1,21.9 L773.4,21.5 L775.8,20.6 L778.1,20.9 L780.5,21.5 L782.8,22.9 L785.2,20.6 L787.5,21.1 L789.8,20.5 L792.2,20.5 L794.5,20.6 L796.9,20.8 L799.2,21.2 L801.6,21.5 L803.9,21.5 L806.2,23.1 L808.6,23.7 L810.9,24.3 L813.3,21.7 L815.6,21.9 L818,22.8 L820.3,25 L822.7,24.5 L825,26.3 L827.3,25.5 L829.7,25.3 L832,24.8 L834.4,26.9 L836.7,25.2 L839.1,23.8 L841.4,22.1 L843.8,21.4 L846.1,17.2 L848.4,19.2 L850.8,22 L853.1,24.4 L855.5,27.6 L857.8,28.3 L860.2,28.1 L862.5,26.5 L864.8,27.6 L867.2,27.8 L869.5,27.8 L871.9,26.6 L874.2,26.8 L876.6,24.9 L878.9,25.1 L881.2,26 L883.6,27.4 L885.9,29.8 L888.3,31.7 L890.6,30.9 L893,30.9 L895.3,32.8 L897.7,32.5 L900,30.8 L902.3,32 L904.7,32.4 L907,31.2 L909.4,32.7 L911.7,33.3 L914.1,32 L916.4,33.4 L918.8,32.5 L921.1,33.2 L923.4,33.2 L925.8,34 L928.1,33.5 L930.5,31.4 L932.8,27.6 L935.2,25.1 L937.5,24.7 L939.8,20.9 L942.2,21.8 L944.5,24.7 L946.9,27.5 L949.2,31 L951.6,32.6 L953.9,31.7 L956.2,29 L958.6,30.7 L960.9,30.6 L963.3,31 L965.6,31 L968,32.1 L970.3,31 L972.7,31.5 L975,30.9 L977.3,31.4 L979.7,30.7 L982,28.1 L984.4,27 L986.7,25.8 L989.1,27.3 L991.4,26.6 L993.8,28.1 L996.1,28.3 L998.4,29.3 L1000.8,27.3 L1003.1,27.6 L1005.5,28 L1007.8,26.4 L1010.2,24.7 L1012.5,22.6 L1014.8,23 L1017.2,22.6 L1019.5,24.1 L1021.9,24.9 L1024.2,24.7 L1026.6,23.4 L1028.9,23.7 L1031.2,24 L1033.6,22.3 L1035.9,25.1 L1038.3,28.1 L1040.6,29.4 L1043,30.3 L1045.3,29.7 L1047.7,30.9 L1050,29 L1052.3,28.2 L1054.7,27.3 L1057,26.5 L1059.4,24.8 L1061.7,21.2 L1064.1,21.6 L1066.4,22.5 L1068.8,21.9 L1071.1,20.9 L1073.4,21.2 L1075.8,19.9 L1078.1,21.1 L1080.5,19.8 L1082.8,19.8 L1085.2,21.3 L1087.5,21.5 L1089.8,21.6 L1092.2,23.4 L1094.5,23.4 L1096.9,22 L1099.2,23.5 L1101.6,22.3 L1103.9,22.9 L1106.2,27.6 L1108.6,30.1 L1110.9,33.3 L1113.3,28.4 L1115.6,23.6 L1118,20.4 L1120.3,20.2 L1122.7,20.8 L1125,20 L1127.3,21.6 L1129.7,22.5 L1132,22.5 L1134.4,21.7 L1136.7,20.3 L1139.1,21.4 L1141.4,20.6 L1143.8,21.8 L1146.1,21.9 L1148.4,23.4 L1150.8,23.3 L1153.1,21.7 L1155.5,22.3 L1157.8,24.1 L1160.2,25.5 L1162.5,26.5 L1164.8,25 L1167.2,26.2 L1169.5,24.7 L1171.9,25.7 L1174.2,26.1 L1176.6,27.8 L1178.9,29.3 L1181.2,29.8 L1183.6,29 L1185.9,27.1 L1188.3,28.2 L1190.6,28.3 L1193,28 L1195.3,28.9 L1197.7,29.5 L1200,30 L1200,60 L0,60 Z"></path>
-    <path id="torn-edge-top" d="M0,30 L2.3,28 L4.7,27.8 L7,26.6 L9.4,28.3 L11.7,28.2 L14.1,26.3 L16.4,25 L18.8,25.6 L21.1,24.4 L23.4,23.4 L25.8,24.8 L28.1,24.8 L30.5,23.6 L32.8,22 L35.2,22.1 L37.5,23.2 L39.8,22.4 L42.2,21.6 L44.5,22.4 L46.9,22.9 L49.2,23 L51.6,21.4 L53.9,21.1 L56.2,23.1 L58.6,23.4 L60.9,23.3 L63.3,23.2 L65.6,24.6 L68,22.4 L70.3,21.5 L72.7,20.3 L75,17.5 L77.3,16 L79.7,14.3 L82,11.4 L84.4,12.9 L86.7,15.1 L89.1,15.7 L91.4,17.8 L93.8,17.6 L96.1,17 L98.4,16.6 L100.8,17.9 L103.1,18.5 L105.5,18.3 L107.8,18.1 L110.2,18.9 L112.5,19.7 L114.8,19.4 L117.2,18 L119.5,17.6 L121.9,17.6 L124.2,16.4 L126.6,15 L128.9,14.3 L131.2,13.6 L133.6,13.6 L135.9,11.1 L138.3,11.9 L140.6,11.5 L143,14 L145.3,14.3 L147.7,15.6 L150,14.3 L152.3,14.8 L154.7,16.6 L157,15.8 L159.4,14.8 L161.7,15.6 L164.1,13.8 L166.4,14.4 L168.8,13 L171.1,12.5 L173.4,14.2 L175.8,13.7 L178.1,15.4 L180.5,14.6 L182.8,14.2 L185.2,14 L187.5,16.2 L189.8,15.1 L192.2,13.7 L194.5,11.9 L196.9,12.6 L199.2,10 L201.6,6.5 L203.9,8.3 L206.2,8.6 L208.6,10.8 L210.9,10.7 L213.3,11.6 L215.6,12.9 L218,13.1 L220.3,12 L222.7,10.7 L225,8.5 L227.3,6.7 L229.7,7 L232,8.7 L234.4,8.2 L236.7,9.1 L239.1,7.3 L241.4,8 L243.8,10.3 L246.1,12.7 L248.4,12.5 L250.8,11.6 L253.1,11.2 L255.5,11.7 L257.8,12.3 L260.2,14.2 L262.5,13.3 L264.8,13.8 L267.2,12.4 L269.5,12.3 L271.9,14.3 L274.2,14 L276.6,14 L278.9,13.8 L281.2,13.4 L283.6,11.7 L285.9,10.9 L288.3,10.7 L290.6,12.3 L293,12.8 L295.3,14.5 L297.7,16.1 L300,16.4 L302.3,16 L304.7,18.3 L307,17.5 L309.4,16.4 L311.7,17 L314.1,18 L316.4,16 L318.8,16.8 L321.1,16.1 L323.4,16.4 L325.8,15.8 L328.1,14.4 L330.5,14.3 L332.8,14.2 L335.2,13.7 L337.5,15.8 L339.8,16.5 L342.2,14.3 L344.5,15 L346.9,13.9 L349.2,12.5 L351.6,8.4 L353.9,5.9 L356.2,5.6 L358.6,7.7 L360.9,11.1 L363.3,11.4 L365.6,14.4 L368,16 L370.3,16 L372.7,16.1 L375,17.4 L377.3,17.5 L379.7,19.7 L382,19.6 L384.4,19.8 L386.7,20.5 L389.1,18.8 L391.4,19.9 L393.8,19.2 L396.1,18 L398.4,18.3 L400.8,17.9 L403.1,19.6 L405.5,22.5 L407.8,23.1 L410.2,23.8 L412.5,24.1 L414.8,25.3 L417.2,25.4 L419.5,23 L421.9,22.9 L424.2,22.7 L426.6,25.1 L428.9,25.4 L431.2,24.5 L433.6,24.3 L435.9,24.4 L438.3,21.9 L440.6,21.9 L443,23.4 L445.3,22.4 L447.7,21.8 L450,20.4 L452.3,22 L454.7,21.9 L457,20.4 L459.4,21.4 L461.7,23.7 L464.1,23.9 L466.4,25.1 L468.8,28.7 L471.1,31.1 L473.4,31.5 L475.8,27.5 L478.1,23.7 L480.5,20.3 L482.8,17.8 L485.2,15.5 L487.5,13 L489.8,13.1 L492.2,10.7 L494.5,10.8 L496.9,12.3 L499.2,10.2 L501.6,10.3 L503.9,11.3 L506.2,12.1 L508.6,11.4 L510.9,12.2 L513.3,12 L515.6,14 L518,12.8 L520.3,13.7 L522.7,13.2 L525,15.3 L527.3,15.9 L529.7,18.2 L532,18.4 L534.4,19.6 L536.7,20 L539.1,21.5 L541.4,21.3 L543.8,19.7 L546.1,19.8 L548.4,21.2 L550.8,22.1 L553.1,23.1 L555.5,23 L557.8,24.8 L560.2,23.4 L562.5,23 L564.8,23.1 L567.2,26 L569.5,24.8 L571.9,25.1 L574.2,24.1 L576.6,25.9 L578.9,25.2 L581.2,23.2 L583.6,22.7 L585.9,21.9 L588.3,21 L590.6,21.8 L593,21.5 L595.3,21.3 L597.7,23.4 L600,23 L602.3,21.2 L604.7,21.7 L607,23.1 L609.4,22.7 L611.7,22 L614.1,21.8 L616.4,22.6 L618.8,23.3 L621.1,22.8 L623.4,20.4 L625.8,19.8 L628.1,19.8 L630.5,19.6 L632.8,19.4 L635.2,19.2 L637.5,17.9 L639.8,20.8 L642.2,21 L644.5,20.4 L646.9,20.8 L649.2,22.1 L651.6,21.5 L653.9,21.1 L656.2,19.4 L658.6,20.2 L660.9,20.1 L663.3,20.3 L665.6,21 L668,20 L670.3,19.8 L672.7,17.3 L675,17.4 L677.3,16.2 L679.7,17.2 L682,14.6 L684.4,14.5 L686.7,14.6 L689.1,13.4 L691.4,13.7 L693.8,15.5 L696.1,14.6 L698.4,15.6 L700.8,13.8 L703.1,14.4 L705.5,16.9 L707.8,17.3 L710.2,18.2 L712.5,16.9 L714.8,18.5 L717.2,19.1 L719.5,18.5 L721.9,19.1 L724.2,20.1 L726.6,22.7 L728.9,22.9 L731.2,24.2 L733.6,23.7 L735.9,23.4 L738.3,22 L740.6,22.7 L743,22.2 L745.3,22.1 L747.7,22.4 L750,24.1 L752.3,25.4 L754.7,24.1 L757,24.3 L759.4,21.8 L761.7,21.1 L764.1,20.1 L766.4,19.1 L768.8,19.7 L771.1,21.9 L773.4,21.5 L775.8,20.6 L778.1,20.9 L780.5,21.5 L782.8,22.9 L785.2,20.6 L787.5,21.1 L789.8,20.5 L792.2,20.5 L794.5,20.6 L796.9,20.8 L799.2,21.2 L801.6,21.5 L803.9,21.5 L806.2,23.1 L808.6,23.7 L810.9,24.3 L813.3,21.7 L815.6,21.9 L818,22.8 L820.3,25 L822.7,24.5 L825,26.3 L827.3,25.5 L829.7,25.3 L832,24.8 L834.4,26.9 L836.7,25.2 L839.1,23.8 L841.4,22.1 L843.8,21.4 L846.1,17.2 L848.4,19.2 L850.8,22 L853.1,24.4 L855.5,27.6 L857.8,28.3 L860.2,28.1 L862.5,26.5 L864.8,27.6 L867.2,27.8 L869.5,27.8 L871.9,26.6 L874.2,26.8 L876.6,24.9 L878.9,25.1 L881.2,26 L883.6,27.4 L885.9,29.8 L888.3,31.7 L890.6,30.9 L893,30.9 L895.3,32.8 L897.7,32.5 L900,30.8 L902.3,32 L904.7,32.4 L907,31.2 L909.4,32.7 L911.7,33.3 L914.1,32 L916.4,33.4 L918.8,32.5 L921.1,33.2 L923.4,33.2 L925.8,34 L928.1,33.5 L930.5,31.4 L932.8,27.6 L935.2,25.1 L937.5,24.7 L939.8,20.9 L942.2,21.8 L944.5,24.7 L946.9,27.5 L949.2,31 L951.6,32.6 L953.9,31.7 L956.2,29 L958.6,30.7 L960.9,30.6 L963.3,31 L965.6,31 L968,32.1 L970.3,31 L972.7,31.5 L975,30.9 L977.3,31.4 L979.7,30.7 L982,28.1 L984.4,27 L986.7,25.8 L989.1,27.3 L991.4,26.6 L993.8,28.1 L996.1,28.3 L998.4,29.3 L1000.8,27.3 L1003.1,27.6 L1005.5,28 L1007.8,26.4 L1010.2,24.7 L1012.5,22.6 L1014.8,23 L1017.2,22.6 L1019.5,24.1 L1021.9,24.9 L1024.2,24.7 L1026.6,23.4 L1028.9,23.7 L1031.2,24 L1033.6,22.3 L1035.9,25.1 L1038.3,28.1 L1040.6,29.4 L1043,30.3 L1045.3,29.7 L1047.7,30.9 L1050,29 L1052.3,28.2 L1054.7,27.3 L1057,26.5 L1059.4,24.8 L1061.7,21.2 L1064.1,21.6 L1066.4,22.5 L1068.8,21.9 L1071.1,20.9 L1073.4,21.2 L1075.8,19.9 L1078.1,21.1 L1080.5,19.8 L1082.8,19.8 L1085.2,21.3 L1087.5,21.5 L1089.8,21.6 L1092.2,23.4 L1094.5,23.4 L1096.9,22 L1099.2,23.5 L1101.6,22.3 L1103.9,22.9 L1106.2,27.6 L1108.6,30.1 L1110.9,33.3 L1113.3,28.4 L1115.6,23.6 L1118,20.4 L1120.3,20.2 L1122.7,20.8 L1125,20 L1127.3,21.6 L1129.7,22.5 L1132,22.5 L1134.4,21.7 L1136.7,20.3 L1139.1,21.4 L1141.4,20.6 L1143.8,21.8 L1146.1,21.9 L1148.4,23.4 L1150.8,23.3 L1153.1,21.7 L1155.5,22.3 L1157.8,24.1 L1160.2,25.5 L1162.5,26.5 L1164.8,25 L1167.2,26.2 L1169.5,24.7 L1171.9,25.7 L1174.2,26.1 L1176.6,27.8 L1178.9,29.3 L1181.2,29.8 L1183.6,29 L1185.9,27.1 L1188.3,28.2 L1190.6,28.3 L1193,28 L1195.3,28.9 L1197.7,29.5 L1200,30 L1200,0 L0,0 Z"></path>
-    <g id="torn-edge-specks-bottom">
-      <circle cx="471.3" cy="16.6" r="1.5"/>
-      <circle cx="116.8" cy="14.8" r="1.2"/>
-      <circle cx="691.2" cy="2.3" r="1.4"/>
-      <circle cx="1044.8" cy="24.7" r="0.9"/>
-      <circle cx="875.2" cy="13.7" r="1.2"/>
-      <circle cx="967.0" cy="29.4" r="1.7"/>
-      <circle cx="501.6" cy="0.5" r="2.1"/>
-      <circle cx="638.6" cy="14.3" r="1.6"/>
-      <circle cx="973.2" cy="24.0" r="2.5"/>
-      <circle cx="518.4" cy="6.7" r="0.7"/>
-      <circle cx="856.6" cy="17.7" r="1.0"/>
-      <circle cx="81.2" cy="6.1" r="2.3"/>
-      <circle cx="972.5" cy="20.3" r="1.5"/>
-      <circle cx="1135.1" cy="9.3" r="1.8"/>
-      <circle cx="435.9" cy="14.1" r="0.7"/>
-      <circle cx="196.4" cy="0.5" r="1.8"/>
-      <circle cx="1063.4" cy="21.4" r="2.2"/>
-      <circle cx="1107.4" cy="19.3" r="1.1"/>
-      <circle cx="483.3" cy="7.6" r="1.6"/>
-      <circle cx="327.8" cy="10.4" r="1.4"/>
-      <circle cx="894.8" cy="22.2" r="2.1"/>
-      <circle cx="838.6" cy="19.5" r="2.1"/>
-    </g>
-    <g id="torn-edge-specks-top">
-      <circle cx="925.2" cy="40.1" r="1.1"/>
-      <circle cx="959.5" cy="38.8" r="2.5"/>
-      <circle cx="89.2" cy="18.8" r="1.2"/>
-      <circle cx="463.8" cy="27.3" r="1.0"/>
-      <circle cx="1118.6" cy="35.5" r="2.1"/>
-      <circle cx="598.3" cy="28.6" r="2.5"/>
-      <circle cx="1178.5" cy="32.3" r="2.6"/>
-      <circle cx="233.5" cy="12.5" r="1.1"/>
-      <circle cx="478.3" cy="21.3" r="1.2"/>
-      <circle cx="472.7" cy="36.3" r="2.6"/>
-      <circle cx="837.7" cy="27.6" r="2.5"/>
-      <circle cx="587.0" cy="34.4" r="2.0"/>
-      <circle cx="919.8" cy="44.3" r="1.4"/>
-      <circle cx="977.9" cy="36.7" r="1.4"/>
-      <circle cx="822.7" cy="29.9" r="1.4"/>
-      <circle cx="197.7" cy="27.3" r="1.5"/>
-      <circle cx="759.3" cy="33.1" r="1.1"/>
-      <circle cx="1203.2" cy="35.1" r="2.1"/>
-      <circle cx="307.7" cy="27.5" r="1.7"/>
-      <circle cx="1049.3" cy="29.4" r="1.4"/>
-      <circle cx="1063.7" cy="30.9" r="0.8"/>
-      <circle cx="237.7" cy="19.7" r="2.0"/>
-    </g>
-  </defs>
-</svg>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
@@ -84,6 +25,7 @@
     <nav class="nav__links" id="navLinks">
       <a href="#topo">Início</a>
       <a href="#acomodacoes">Acomodações</a>
+      <a href="#galeria">Galeria</a>
       <a href="#cafe">Sabores</a>
       <a href="#experiencias">Experiências</a>
       <a href="#faq">Perguntas Frequentes</a>
@@ -97,14 +39,22 @@
 
   <!-- ===== 1. HERO ===== -->
   <section id="topo" class="hero">
-    <img src="assets/img/hero-rio.jpg" alt="Rio e ponte ao entardecer em Aquidauana, vista às margens do Hotel Beira Rio" class="hero__img" width="1920" height="1280" fetchpriority="high">
+    <div class="hero__carousel" aria-hidden="true">
+      <div class="hero__track">
+        <img src="assets/img/hero-igreja-matriz.jpg" alt="" fetchpriority="high">
+        <img src="assets/img/hero-rio-drone-lfm.jpg?v=4" alt="">
+        <img src="assets/img/hero-igreja-matriz.jpg" alt="">
+      </div>
+    </div>
     <div class="hero__scrim"></div>
     <div class="hero__content reveal">
       <h1 class="hero__title">À Beira do Rio, à Beira de Tudo</h1>
       <p class="hero__subtitle">Hospedagem simples e acolhedora, a caminho do Pantanal</p>
-    </div>
-    <div class="torn-edge torn-edge--to-bg" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
+      <div class="hero__facts">
+        <span class="hero__fact">Diárias a partir de R$ 155</span>
+        <span class="hero__fact hero__fact--rating">10/10 · avaliação real de hóspede</span>
+      </div>
+      <a class="btn btn--sun btn--lg hero__cta" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Consultar Disponibilidade</a>
     </div>
   </section>
 
@@ -129,12 +79,6 @@
     <div class="photo-cta__content reveal">
       <a class="btn btn--frame" href="#acomodacoes">Ver Acomodações</a>
     </div>
-    <div class="torn-edge torn-edge--to-bg torn-edge--top" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
-    </div>
-    <div class="torn-edge torn-edge--to-white" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
-    </div>
   </section>
 
   <!-- ===== 5. CONFORTO PARA DESCANSAR (Relax and Unwind) ===== -->
@@ -146,10 +90,21 @@
         <p class="lede">Quartos simples, limpos e aconchegantes — o essencial bem feito, para dormir bem depois de um dia de estrada, pesca ou passeio pelo Pantanal.</p>
       </div>
 
+      <!-- Grade repete as 4 fotos reais de quarto disponíveis até hoje para preencher os 12 quadrados;
+           substituir cada figure por uma foto nova conforme forem chegando, mantendo a mesma estrutura. -->
       <div class="room-gallery reveal">
-        <img src="assets/img/feat-1.jpg" alt="Ambiente de hospedagem do Hotel Beira Rio" loading="lazy" width="1200" height="800" class="room-gallery__img room-gallery__img--wide">
-        <img src="assets/img/feat-2.jpg" alt="Detalhe de acomodação do Hotel Beira Rio" loading="lazy" width="800" height="800" class="room-gallery__img">
-        <img src="assets/img/pantanal-serra.jpg" alt="Serra e paisagem natural do entorno de Aquidauana" loading="lazy" width="800" height="800" class="room-gallery__img">
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
       </div>
 
       <p class="section-sub reveal">Todas as diárias incluem café da manhã. Preços por diária, sujeitos a confirmação na reserva.</p>
@@ -182,7 +137,6 @@
       </div>
 
       <div class="section-head section-head--mid reveal">
-        <p class="eyebrow">Pacotes</p>
         <h2 class="section-title">Estadias pensadas para cada tipo de viagem</h2>
       </div>
       <div class="packages">
@@ -215,36 +169,152 @@
     </div>
   </section>
 
+  <!-- ===== 5.5 GALERIA DE FOTOS ===== -->
+  <!-- Esqueleto da galeria: algumas fotos ainda sao reaproveitadas de outras categorias (o Hotel Beira Rio
+       so tem 1 foto real por tipo de quarto ate agora) e 3 categorias ainda nao tem foto nenhuma
+       (Fachada, Recepcao, Jardim) - ficam marcadas "Em breve" ate a proxima sessao de fotos.
+       Substituir cada src conforme as fotos reais forem chegando; a estrutura/legendas nao precisam mudar. -->
+  <section id="galeria" class="section galeria">
+    <div class="container reveal">
+      <h2 class="section-title">Galeria de Fotos</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/fachada-real.jpg" alt="Fachada do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Fachada</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-entrada-hotel.jpg" alt="Entrada do Hotel Beira Rio com placa de identificação, vista da rua" loading="lazy"></div>
+          <figcaption>Entrada</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-recepcao.jpg" alt="Recepção do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Recepção</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-area-externa.jpg" alt="Área externa coberta do Hotel Beira Rio, com poltronas e plantas" loading="lazy"></div>
+          <figcaption>Área Externa</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-deck-rio.jpg" alt="Deck do Hotel Beira Rio com vista para o rio Aquidauana" loading="lazy"></div>
+          <figcaption>Deck à Beira do Rio</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Quarto Individual</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Quarto duplo do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Quarto Duplo</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto triplo do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Quarto Triplo</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-salao-1.jpg" alt="Salão do café da manhã do Hotel Beira Rio com hóspedes" loading="lazy"></div>
+          <figcaption>Salão do café da manhã</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-mesa-cafe-manha.jpg" alt="Mesa do café da manhã do Hotel Beira Rio com suco, bules e talheres" loading="lazy"></div>
+          <figcaption>Mesa do café da manhã</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/depoimento-mamao-melao.jpg" alt="Frutas frescas servidas no café da manhã" loading="lazy"></div>
+          <figcaption>Frutas frescas</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-bolo-pudim.jpg" alt="Brownie e bolo de pudim servidos no café da manhã do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Bolo caseiro</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-bolinho.png" alt="Bolinho de chuva com cobertura de chocolate servido no café da manhã" loading="lazy"></div>
+          <figcaption>Doces</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-frios-queijos.jpg" alt="Frios e queijos servidos no café da manhã" loading="lazy"></div>
+          <figcaption>Frios e queijos</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-salao-hospedes.jpg" alt="Salão de eventos do Hotel Beira Rio" loading="lazy"></div>
+          <figcaption>Salão de Eventos</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-sala-estar.jpg" alt="Sala de estar do Hotel Beira Rio com sofás" loading="lazy"></div>
+          <figcaption>Sala de Estar</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== 6. O QUE DIZEM NOSSOS HÓSPEDES (Guest Reviews) ===== -->
-  <!-- Ainda não temos depoimentos reais de hóspedes coletados. Nenhuma citação ou nome foi inventado aqui —
-       a seção fica visualmente pronta e deve ser preenchida assim que tivermos avaliações reais (Google/Instagram/WhatsApp). -->
+  <!-- Grade estilo mosaico (referencia do cliente), 4 colunas x 3 linhas, sem gap/raio.
+       So temos 1 feedback real coletado ate agora (Glaucia, nota 10, 1o tile). Os outros 11 tiles
+       sao fotos do hotel usadas como preenchimento temporario - substituir cada uma por um novo
+       print de feedback real conforme forem chegando, mantendo a mesma estrutura/formato de tile. -->
   <section id="depoimentos" class="section depoimentos">
     <div class="container reveal">
-      <p class="eyebrow">Hóspedes</p>
       <h2 class="section-title">O que dizem nossos hóspedes</h2>
-      <p class="lede">Em breve, histórias reais de quem já se hospedou à beira do rio.</p>
-      <div class="depoimentos__card">
-        <img src="assets/img/nb-rio.jpg" alt="Rio Aquidauana visto da margem, próximo ao Hotel Beira Rio" loading="lazy" width="900" height="700">
-        <!-- Depoimento real pendente de coleta com hóspedes. -->
+      <p class="lede">Histórias reais de quem já se hospedou à beira do rio.</p>
+      <div class="depoimentos__grid">
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/depoimento-fb-quarto.jpg" alt="Print de feedback de hóspede: nota 10, &quot;Excepcional&quot; - Localização e atendeu minhas expectativas, hotel bem gostoso, lugar bonito, café da manhã excelente. Com certeza voltarei mais vezes e vou também indicar aos amigos." loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/depoimento-fb-mamao.jpg" alt="Print de feedback de hóspede: nota 10, &quot;Perfeito&quot; - Acomodação simples mas muito boa! Quarto e banheiro super limpo. Café da manhã simples também mas muito gostoso, o pãozinho francês uma delícia, pela primeira vez em vários hotéis que fiquei o melão e o mamão super doce." loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/depoimento-fb-fachada.jpg" alt="Print de feedback de hóspede: nota 9,0, &quot;Muito bom! Estão de parabéns!&quot; - Ótimo café da manhã. Ótimo ar condicionado. Hotel é literalmente beira rio, com o Rio Aquidauana no fundo. Ótima localização, o hotel é no centro." loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/depoimento-fb-suco.jpg" alt="Print de feedback de hóspede: nota 10, &quot;Hotel maravilhoso na beira do Pantanal mas dentro da cidade&quot; - Gostei de tudo, mas o rio passando do lado é incrível. O hotel também é impecável, limpo, organizado e ótimo atendimento! Melhor custo benefício de Aquidauana." loading="lazy"></figure>
       </div>
       <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20estadia%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Reserve sua Estadia</a>
     </div>
   </section>
 
+  <!-- ===== 6.5 INSTAGRAM ===== -->
+  <!-- Handle confirmado pelo cliente: @hotelbeirarioaquidauana (instagram.com/hotelbeirarioaquidauana).
+       Miniaturas reais dos ultimos posts (informados pelo cliente em 2026-08-24), baixadas diretamente
+       do CDN do Instagram (nao sao fotos aleatorias/placeholder) e cada uma linka pro post real. E' um
+       snapshot manual, nao ao vivo - quando o cliente mandar posts novos, trocar a imagem + o href aqui. -->
+  <section id="instagram" class="section section--tint instagram-feed">
+    <div class="container reveal">
+      <div class="instagram-feed__header">
+        <img class="instagram-feed__avatar" src="assets/img/logo.jpeg" alt="Hotel Beira Rio">
+        <div class="instagram-feed__info">
+          <p class="instagram-feed__handle">@hotelbeirarioaquidauana</p>
+          <p class="instagram-feed__sub">Bastidores e novidades do dia a dia do hotel</p>
+        </div>
+        <a class="btn btn--outline instagram-feed__follow" href="https://instagram.com/hotelbeirarioaquidauana" target="_blank" rel="noopener">Seguir</a>
+      </div>
+      <div class="instagram-feed__grid">
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/C6sOr_KrwFk/" target="_blank" rel="noopener"><img src="assets/img/ig-artistas-israel-rodolffo.jpg" alt="Hotel Beira Rio recebeu Israel & Rodolffo, Fred & Fabrício, Thiago Brava e Barões da Pisadinha" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/DccJ7gNxz3u/" target="_blank" rel="noopener"><img src="assets/img/ig-cafe-manha.jpg" alt="Post do Instagram: Café da Manhã do Hotel Beira Rio" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/DcP0BILNYhQ/" target="_blank" rel="noopener"><img src="assets/img/ig-quartos.jpg" alt="Post do Instagram: conforto dos quartos do Hotel Beira Rio" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/Db_MUCekVgg/" target="_blank" rel="noopener"><img src="assets/img/ig-feedback-avaliacoes.jpg" alt="Post do Instagram sobre feedbacks e avaliações de hóspedes" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/C6NTSgDLtAN/" target="_blank" rel="noopener"><img src="assets/img/ig-anacastela.jpg" alt="Cantora Ana Castela hospedada no Hotel Beira Rio" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/C-fo56BRl1Z/" target="_blank" rel="noopener"><img src="assets/img/ig-souza-alexsilva.jpg" alt="Hotel Beira Rio recebeu os jogadores Souza e Alex Silva" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/DPZwAWtEo6D/" target="_blank" rel="noopener"><img src="assets/img/ig-futebol-personagens.jpg" alt="Hotel Beira Rio recebeu personagens do futebol brasileiro" loading="lazy"></a>
+        <a class="instagram-feed__frame" href="https://www.instagram.com/p/DULhjo1Db3f/" target="_blank" rel="noopener"><img src="assets/img/ig-naviraiense.jpg" alt="Hotel Beira Rio recebeu a equipe do Naviraiense para partida contra o C.R. Aquidauana" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== 7. CAFÉ DA MANHÃ INCLUÍDO (Dining) ===== -->
-  <!-- Ainda não temos foto real do café da manhã servido pelo hotel; usamos um bloco de cor/textura da marca em vez de inventar uma imagem. -->
   <section id="cafe" class="cafe-block">
+    <div class="cafe-block__carousel" aria-hidden="true">
+      <div class="cafe-block__track">
+        <img src="assets/img/cafe-pao-de-queijo.jpg" alt="" loading="lazy">
+        <img src="assets/img/gal-doces.jpg" alt="" loading="lazy">
+        <img src="assets/img/gal-bolo-ninho.jpg" alt="" loading="lazy">
+        <img src="assets/img/gal-frios-queijos.jpg" alt="" loading="lazy">
+        <img src="assets/img/depoimento-mamao-melao.jpg" alt="" loading="lazy">
+        <img src="assets/img/gal-salao-1.jpg" alt="" loading="lazy">
+        <img src="assets/img/cafe-pao-de-queijo.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+    <div class="cafe-block__scrim"></div>
     <div class="cafe-block__content reveal">
-      <p class="eyebrow eyebrow--light">Sabores</p>
       <h2 class="section-title section-title--light">Café da Manhã Incluído</h2>
-      <p class="lede lede--light">Toda diária no Hotel Beira Rio já inclui café da manhã — o combustível para quem vai sair cedo para pescar, seguir viagem para o Pantanal ou simplesmente aproveitar Aquidauana com calma, sem custo extra e sem letras miúdas.</p>
+      <p class="lede lede--light cafe-block__lede">Toda diária no Hotel Beira Rio já vem com café da manhã incluído, sem cobrança extra. É o combustível de quem vai sair de madrugada pra pescar, seguir viagem rumo ao Pantanal ou só ficar em Aquidauana aproveitando o dia com calma, no seu próprio ritmo.</p>
       <a class="btn btn--frame" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20caf%C3%A9%20da%20manh%C3%A3%20do%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Saiba Mais no WhatsApp</a>
-    </div>
-    <div class="torn-edge torn-edge--to-white torn-edge--top" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
-    </div>
-    <div class="torn-edge torn-edge--to-white" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-bottom"></use><use href="#torn-edge-specks-bottom"></use></svg>
     </div>
   </section>
 
@@ -253,17 +323,18 @@
   <section id="localizacao" class="section section--tint localizacao">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Experiências</p>
         <h2 class="section-title">Localização Privilegiada</h2>
-        <p class="lede">Aquidauana é cidade histórica às margens do rio, cercada por serras e a caminho do Pantanal sul-mato-grossense — araras, jacarés, capivaras e a pesca esportiva fazem parte da rotina de quem visita a região.</p>
+        <p class="lede">Aquidauana é uma cidade histórica às margens do rio. Perto do hotel estão a Prainha, as praças do centro, a Igreja Matriz, o Museu Histórico e trilhas como a Estrada Parque de Piraputanga e o Mirante do Morro do Paxixi.</p>
       </div>
-      <div class="nb-grid reveal">
-        <img src="assets/img/nb-rio.jpg" alt="Rio Aquidauana visto da margem" loading="lazy" width="500" height="500">
-        <img src="assets/img/nb-serra.jpg" alt="Serra próxima a Aquidauana-MS" loading="lazy" width="500" height="500">
-        <img src="assets/img/nb-pantanal.jpg" alt="Paisagem típica do Pantanal sul-mato-grossense" loading="lazy" width="500" height="500">
-        <img src="assets/img/nb-arara.jpg" alt="Arara em ambiente natural perto de Aquidauana" loading="lazy" width="500" height="500">
-        <img src="assets/img/nb-jaguar.jpg" alt="Onça-pintada em habitat natural da região" loading="lazy" width="500" height="500">
-        <img src="assets/img/nb-sunset.jpg" alt="Pôr do sol sobre o rio em Aquidauana" loading="lazy" width="500" height="500">
+      <div class="depoimentos__grid reveal">
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-prainha.jpg" alt="Prainha de Aquidauana, às margens do rio" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-praca.jpg" alt="Praça de Aquidauana com moradores aproveitando o lazer" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-eu-amo-aquidauana.jpg" alt="Monumento Eu Amo Aquidauana em praça da cidade" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-matriz.jpg" alt="Igreja Matriz de Aquidauana, próxima ao Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-museu.jpg" alt="Museu Histórico de Aquidauana" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-lagoa.png" alt="Lagoa de Aquidauana com monumento indígena" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-estrada-parque.webp" alt="Vista aérea da Estrada Parque de Piraputanga" loading="lazy"></figure>
+        <figure class="depoimentos__tile js-lightbox"><img src="assets/img/loc-morro-paxixi.jpg" alt="Mirante do Morro do Paxixi, trilha natural em Aquidauana" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -272,9 +343,7 @@
   <section id="reservar" class="reservar-final">
     <img src="assets/img/pantanal-serra.jpg" alt="Serra e paisagem natural do entorno de Aquidauana ao entardecer" class="reservar-final__img" loading="lazy" width="1920" height="1200">
     <div class="reservar-final__scrim"></div>
-    <div class="torn-edge torn-edge--to-white torn-edge--top" aria-hidden="true">
-      <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><use href="#torn-edge-top"></use><use href="#torn-edge-specks-top"></use></svg>
-    </div>
+    <div class="fade-edge fade-edge--top" aria-hidden="true"></div>
     <div class="container reservar-final__content reveal">
       <img src="assets/img/logo.jpeg" alt="Hotel Beira Rio - logo" width="72" height="72" class="reservar-final__logo">
       <p class="eyebrow eyebrow--light">Contato</p>
@@ -315,8 +384,7 @@
         </div>
         <div class="footer__col">
           <p class="footer__heading">Redes Sociais</p>
-          <!-- Handle do Instagram a confirmar com o cliente; usando placeholder genérico até validação. -->
-          <a href="https://instagram.com/hotelbeirario" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://instagram.com/hotelbeirarioaquidauana" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
       <p class="footer__copy">© 2026 Hotel Beira Rio · Aquidauana, MS — Todos os direitos reservados</p>
@@ -326,7 +394,6 @@
   <!-- ===== FAQ (Perguntas Frequentes — referenced by nav) ===== -->
   <section id="faq" class="section faq">
     <div class="container reveal">
-      <p class="eyebrow">Perguntas Frequentes</p>
       <h2 class="section-title">Dúvidas Comuns</h2>
       <div class="faq__list">
         <details>
@@ -346,6 +413,14 @@
   </section>
 
 </main>
+
+<!-- Lightbox: expande qualquer foto da Galeria em tela cheia ao clicar. Ver js/main.js. -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Foto anterior">&#8249;</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Próxima foto">&#8250;</button>
+</div>
 
 <script src="js/main.js"></script>
 </body>

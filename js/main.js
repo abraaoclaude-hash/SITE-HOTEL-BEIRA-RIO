@@ -70,4 +70,54 @@
       window.open(url, "_blank", "noopener");
     });
   }
+
+  // ---- lightbox (galeria: clique numa foto pra ver ela inteira) ----
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxClose = document.getElementById("lightboxClose");
+  var lightboxPrev = document.getElementById("lightboxPrev");
+  var lightboxNext = document.getElementById("lightboxNext");
+  var lightboxTriggers = Array.prototype.slice.call(document.querySelectorAll(".js-lightbox img"));
+
+  if (lightbox && lightboxTriggers.length) {
+    var currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      var img = lightboxTriggers[currentIndex];
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function showNext() { openLightbox((currentIndex + 1) % lightboxTriggers.length); }
+    function showPrev() { openLightbox((currentIndex - 1 + lightboxTriggers.length) % lightboxTriggers.length); }
+
+    lightboxTriggers.forEach(function (img, index) {
+      img.addEventListener("click", function () { openLightbox(index); });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxNext.addEventListener("click", showNext);
+    lightboxPrev.addEventListener("click", showPrev);
+
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    });
+  }
 })();
