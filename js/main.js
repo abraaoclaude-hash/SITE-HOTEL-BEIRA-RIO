@@ -54,22 +54,47 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  // ---- booking form (placeholder until a real booking engine is integrated) ----
+  // ---- booking forms (placeholder until a real booking engine is integrated) ----
   // No reservation system is connected yet: submitting simply builds a WhatsApp
-  // link (optionally including the chosen dates) and opens it in a new tab.
-  var bookingForm = document.getElementById("bookingForm");
-  if (bookingForm) {
-    bookingForm.addEventListener("submit", function (e) {
+  // link (optionally including the chosen dates, typed as dd/mm/aaaa) and opens it
+  // in a new tab. There are two of these forms (hero + rodapé "Reserve Sua Estadia"),
+  // so behaviour is scoped per-form via [name] rather than global ids.
+  function maskDateInput(input) {
+    input.addEventListener("input", function () {
+      var digits = input.value.replace(/\D/g, "").slice(0, 8);
+      var formatted = digits;
+      if (digits.length > 4) {
+        formatted = digits.slice(0, 2) + "/" + digits.slice(2, 4) + "/" + digits.slice(4);
+      } else if (digits.length > 2) {
+        formatted = digits.slice(0, 2) + "/" + digits.slice(2);
+      }
+      input.value = formatted;
+    });
+  }
+
+  document.querySelectorAll(".booking-form").forEach(function (form) {
+    var checkinInput = form.querySelector('[name="checkin"]');
+    var checkoutInput = form.querySelector('[name="checkout"]');
+    var pessoasInput = form.querySelector('[name="pessoas"]');
+    var petsInput = form.querySelector('[name="pets"]');
+    if (checkinInput) maskDateInput(checkinInput);
+    if (checkoutInput) maskDateInput(checkoutInput);
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var checkin = document.getElementById("checkin").value;
-      var checkout = document.getElementById("checkout").value;
+      var checkin = checkinInput ? checkinInput.value.trim() : "";
+      var checkout = checkoutInput ? checkoutInput.value.trim() : "";
+      var pessoas = pessoasInput ? pessoasInput.value.trim() : "";
+      var pets = petsInput ? petsInput.value.trim() : "";
       var msg = "Olá! Gostaria de verificar disponibilidade no Hotel Beira Rio.";
       if (checkin) msg += " Check-in: " + checkin + ".";
       if (checkout) msg += " Check-out: " + checkout + ".";
+      if (pessoas) msg += " Pessoas: " + pessoas + ".";
+      if (pets && Number(pets) > 0) msg += " Pets: " + pets + " (taxa de R$50 por pet).";
       var url = "https://wa.me/5567993409398?text=" + encodeURIComponent(msg);
       window.open(url, "_blank", "noopener");
     });
-  }
+  });
 
   // ---- lightbox (galeria: clique numa foto pra ver ela inteira) ----
   var lightbox = document.getElementById("lightbox");

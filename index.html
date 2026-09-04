@@ -7,7 +7,7 @@
 <meta name="description" content="Hotel Beira Rio em Aquidauana-MS, à beira do rio, perto do Pantanal. Diárias com café da manhã incluído, pacotes para casal, família e pesca, e passeios pela natureza.">
 <link rel="icon" href="assets/img/logo.jpeg">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -41,9 +41,11 @@
   <section id="topo" class="hero">
     <div class="hero__carousel" aria-hidden="true">
       <div class="hero__track">
-        <img src="assets/img/hero-igreja-matriz.jpg" alt="" fetchpriority="high">
-        <img src="assets/img/hero-rio-drone-lfm.jpg?v=4" alt="">
+        <img src="assets/img/hero-fachada-noite.jpg" alt="" fetchpriority="high">
         <img src="assets/img/hero-igreja-matriz.jpg" alt="">
+        <img src="assets/img/hero-rio-drone-lfm.jpg?v=4" alt="">
+        <img src="assets/img/hero-fachada-dia.jpg" alt="">
+        <img src="assets/img/hero-fachada-noite.jpg" alt="">
       </div>
     </div>
     <div class="hero__scrim"></div>
@@ -51,10 +53,28 @@
       <h1 class="hero__title">À Beira do Rio, à Beira de Tudo</h1>
       <p class="hero__subtitle">Hospedagem simples e acolhedora, a caminho do Pantanal</p>
       <div class="hero__facts">
-        <span class="hero__fact">Diárias a partir de R$ 155</span>
+        <span class="hero__fact">Diárias a partir de R$ 145</span>
         <span class="hero__fact hero__fact--rating">10/10 · avaliação real de hóspede</span>
       </div>
-      <a class="btn btn--sun btn--lg hero__cta" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">Consultar Disponibilidade</a>
+      <form class="booking-form booking-form--start" id="bookingFormHero">
+        <div class="booking-form__field">
+          <label for="checkin-hero">Check-in</label>
+          <input type="text" inputmode="numeric" id="checkin-hero" name="checkin" placeholder="dd/mm/aaaa" maxlength="10" autocomplete="off">
+        </div>
+        <div class="booking-form__field">
+          <label for="checkout-hero">Check-out</label>
+          <input type="text" inputmode="numeric" id="checkout-hero" name="checkout" placeholder="dd/mm/aaaa" maxlength="10" autocomplete="off">
+        </div>
+        <div class="booking-form__field booking-form__field--narrow">
+          <label for="pessoas-hero">Pessoas</label>
+          <input type="number" inputmode="numeric" id="pessoas-hero" name="pessoas" min="1" max="20" placeholder="Ex: 2">
+        </div>
+        <div class="booking-form__field booking-form__field--narrow">
+          <label for="pets-hero">Pets</label>
+          <input type="number" inputmode="numeric" id="pets-hero" name="pets" min="0" max="10" placeholder="0">
+        </div>
+        <button type="submit" class="btn btn--sun btn--lg">Verificar Disponibilidade</button>
+      </form>
     </div>
   </section>
 
@@ -74,7 +94,7 @@
 
   <!-- ===== 3. FULL-BLEED PHOTO + CTA ===== -->
   <section class="photo-cta">
-    <img src="assets/img/fachada-real.jpg" alt="Fachada real do Hotel Beira Rio em Aquidauana-MS" class="photo-cta__img" loading="lazy" width="1920" height="1100">
+    <img src="assets/img/hero-araras.jpg" alt="Casal de araras-canindé em Aquidauana-MS, perto do Hotel Beira Rio" class="photo-cta__img" loading="lazy" width="1556" height="1011">
     <div class="photo-cta__scrim"></div>
     <div class="photo-cta__content reveal">
       <a class="btn btn--frame" href="#acomodacoes">Ver Acomodações</a>
@@ -90,21 +110,21 @@
         <p class="lede">Quartos simples, limpos e aconchegantes — o essencial bem feito, para dormir bem depois de um dia de estrada, pesca ou passeio pelo Pantanal.</p>
       </div>
 
-      <!-- Grade repete as 4 fotos reais de quarto disponíveis até hoje para preencher os 12 quadrados;
-           substituir cada figure por uma foto nova conforme forem chegando, mantendo a mesma estrutura. -->
+      <!-- 12 fotos reais e diferentes entre si (6 quartos, 1 banheiro, 5 áreas/vistas).
+           Substituir cada figure por uma foto nova conforme forem chegando, mantendo a mesma estrutura. -->
       <div class="room-gallery reveal">
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
         <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto triplo do Hotel Beira Rio com espelho" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-triplo-tv.jpg" alt="Quarto triplo do Hotel Beira Rio com TV e ar-condicionado" loading="lazy"></figure>
         <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto30-camas.jpg" alt="Quarto do Hotel Beira Rio com camas arrumadas" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Cama de casal arrumada em quarto do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-banheiro.jpg" alt="Banheiro privativo de um dos quartos do Hotel Beira Rio" loading="lazy"></figure>
-        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto do Hotel Beira Rio com quadro de araras" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-duplo-araras.jpg" alt="Quarto duplo do Hotel Beira Rio com quadro de araras" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/room-araras-frigobar.jpg" alt="Quarto do Hotel Beira Rio com frigobar" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/gal-varanda-frente.jpg" alt="Varanda de entrada do Hotel Beira Rio com poltronas" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/gal-por-do-sol-rio.jpg" alt="Pôr do sol no rio Aquidauana, perto do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/gal-entrada-hotel.jpg" alt="Entrada do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/gal-recepcao.jpg" alt="Recepção do Hotel Beira Rio" loading="lazy"></figure>
+        <figure class="room-gallery__tile js-lightbox"><img src="assets/img/gal-deck-rio.jpg" alt="Deck do Hotel Beira Rio com vista para o rio Aquidauana" loading="lazy"></figure>
       </div>
 
       <p class="section-sub reveal">Todas as diárias incluem café da manhã. Preços por diária, sujeitos a confirmação na reserva.</p>
@@ -112,59 +132,32 @@
       <div class="rooms">
         <article class="room-card reveal">
           <h3>Cama de casal individual</h3>
-          <p class="room-card__price">R$ 155<span>/diária</span></p>
-          <p class="room-card__desc">Ideal para quem viaja sozinho ou em casal, com cama de casal e café da manhã incluído.</p>
-          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20casal%20individual%20(R%24155).">Consultar disponibilidade</a>
+          <p class="room-card__price">R$ 145<span>/diária</span></p>
+          <p class="room-card__desc">Ideal para quem viaja sozinho, com cama de casal e café da manhã incluído.</p>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20casal%20individual%20(R%24145).">Consultar disponibilidade</a>
         </article>
         <article class="room-card reveal">
           <h3>Quarto Duplo</h3>
           <p class="room-card__price">R$ 199<span>/diária</span></p>
           <p class="room-card__desc">Para duas pessoas, com café da manhã incluído. Ótimo para quem viaja em dupla.</p>
-          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20duplo%20(R%24199).">Consultar disponibilidade</a>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20duplo%20(R%24199).">Consultar disponibilidade</a>
         </article>
         <article class="room-card reveal">
           <h3>Quarto Triplo</h3>
           <p class="room-card__price">R$ 255<span>/diária</span></p>
           <p class="room-card__desc">Acomoda três pessoas, com café da manhã incluído. Boa opção para amigos ou pequenas famílias.</p>
-          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20triplo%20(R%24255).">Consultar disponibilidade</a>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20triplo%20(R%24255).">Consultar disponibilidade</a>
         </article>
         <article class="room-card reveal">
           <h3>Quarto Quádruplo</h3>
           <p class="room-card__price">R$ 299<span>/diária</span></p>
           <p class="room-card__desc">Para até quatro pessoas, com café da manhã incluído. Perfeito para famílias.</p>
-          <a class="btn btn--outline" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20qu%C3%A1druplo%20(R%24299).">Consultar disponibilidade</a>
-        </article>
-      </div>
-
-      <div class="section-head section-head--mid reveal">
-        <h2 class="section-title">Estadias pensadas para cada tipo de viagem</h2>
-      </div>
-      <div class="packages">
-        <article class="package-card reveal">
-          <h3>Pacote Casal</h3>
-          <p class="package-card__meta">2 noites · Quarto duplo</p>
-          <p class="package-card__price">R$ 380</p>
-          <p class="room-card__desc">Duas noites a dois, com café da manhã incluído todos os dias.</p>
-          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Casal%20(2%20noites%2C%20R%24380).">Reservar pacote</a>
-        </article>
-        <article class="package-card reveal">
-          <h3>Pacote Família</h3>
-          <p class="package-card__meta">2 noites · Quarto quádruplo</p>
-          <p class="package-card__price">R$ 560</p>
-          <p class="room-card__desc">Duas noites para a família toda, com café da manhã incluído todos os dias.</p>
-          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Fam%C3%ADlia%20(2%20noites%2C%20R%24560).">Reservar pacote</a>
-        </article>
-        <article class="package-card reveal">
-          <h3>Pacote Pescador / Fim de Semana</h3>
-          <p class="package-card__meta">3 noites · Quarto triplo</p>
-          <p class="package-card__price">R$ 720</p>
-          <p class="room-card__desc">Três noites completas para curtir a pesca e a natureza da região com tranquilidade.</p>
-          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20Pacote%20Pescador%2FFim%20de%20Semana%20(3%20noites%2C%20R%24720).">Reservar pacote</a>
+          <a class="btn btn--sun" href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio.%20Tenho%20interesse%20no%20quarto%20qu%C3%A1druplo%20(R%24299).">Consultar disponibilidade</a>
         </article>
       </div>
 
       <div class="conforto__cta reveal">
-        <a class="btn btn--outline" href="#acomodacoes">Ver Quartos e Diárias</a>
+        <a class="btn btn--sun" href="#acomodacoes">Ver Quartos e Diárias</a>
       </div>
     </div>
   </section>
@@ -200,11 +193,11 @@
         </figure>
 
         <figure class="gallery-item">
-          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-individual.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></div>
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Quarto individual do Hotel Beira Rio" loading="lazy"></div>
           <figcaption>Quarto Individual</figcaption>
         </figure>
         <figure class="gallery-item">
-          <div class="gallery-item__frame js-lightbox"><img src="assets/img/room-apto06-cama.jpg" alt="Quarto duplo do Hotel Beira Rio" loading="lazy"></div>
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-quarto-duplo.jpg" alt="Quarto duplo do Hotel Beira Rio" loading="lazy"></div>
           <figcaption>Quarto Duplo</figcaption>
         </figure>
         <figure class="gallery-item">
@@ -226,7 +219,7 @@
           <figcaption>Frutas frescas</figcaption>
         </figure>
         <figure class="gallery-item">
-          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-bolo-pudim.jpg" alt="Brownie e bolo de pudim servidos no café da manhã do Hotel Beira Rio" loading="lazy"></div>
+          <div class="gallery-item__frame js-lightbox"><img src="assets/img/gal-bolo-pudim.jpg" alt="Bolo de brigadeiro servido no café da manhã do Hotel Beira Rio" loading="lazy"></div>
           <figcaption>Bolo caseiro</figcaption>
         </figure>
         <figure class="gallery-item">
@@ -299,17 +292,8 @@
 
   <!-- ===== 7. CAFÉ DA MANHÃ INCLUÍDO (Dining) ===== -->
   <section id="cafe" class="cafe-block">
-    <div class="cafe-block__carousel" aria-hidden="true">
-      <div class="cafe-block__track">
-        <img src="assets/img/cafe-pao-de-queijo.jpg" alt="" loading="lazy">
-        <img src="assets/img/gal-doces.jpg" alt="" loading="lazy">
-        <img src="assets/img/gal-bolo-ninho.jpg" alt="" loading="lazy">
-        <img src="assets/img/gal-frios-queijos.jpg" alt="" loading="lazy">
-        <img src="assets/img/depoimento-mamao-melao.jpg" alt="" loading="lazy">
-        <img src="assets/img/gal-salao-1.jpg" alt="" loading="lazy">
-        <img src="assets/img/cafe-pao-de-queijo.jpg" alt="" loading="lazy">
-      </div>
-    </div>
+    <img src="assets/img/depoimento-mamao-melao.jpg" alt="Mamão e melão fatiados servidos no café da manhã do Hotel Beira Rio" class="cafe-block__img" loading="lazy">
+
     <div class="cafe-block__scrim"></div>
     <div class="cafe-block__content reveal">
       <h2 class="section-title section-title--light">Café da Manhã Incluído</h2>
@@ -353,18 +337,25 @@
       <!-- Formulário de datas é apenas visual/estrutural por enquanto: não há motor de reservas real integrado.
            O envio redireciona para o WhatsApp com uma mensagem pré-preenchida (incluindo as datas escolhidas,
            quando informadas). Substituir por integração real (Cloudbeds ou similar) quando o hotel contratar um motor de reservas. -->
-      <form class="booking-form" id="bookingForm">
+      <form class="booking-form" id="bookingFormFinal">
         <div class="booking-form__field">
-          <label for="checkin">Check-in</label>
-          <input type="date" id="checkin" name="checkin">
+          <label for="checkin-final">Check-in</label>
+          <input type="text" inputmode="numeric" id="checkin-final" name="checkin" placeholder="dd/mm/aaaa" maxlength="10" autocomplete="off">
         </div>
         <div class="booking-form__field">
-          <label for="checkout">Check-out</label>
-          <input type="date" id="checkout" name="checkout">
+          <label for="checkout-final">Check-out</label>
+          <input type="text" inputmode="numeric" id="checkout-final" name="checkout" placeholder="dd/mm/aaaa" maxlength="10" autocomplete="off">
+        </div>
+        <div class="booking-form__field booking-form__field--narrow">
+          <label for="pessoas-final">Pessoas</label>
+          <input type="number" inputmode="numeric" id="pessoas-final" name="pessoas" min="1" max="20" placeholder="Ex: 2">
+        </div>
+        <div class="booking-form__field booking-form__field--narrow">
+          <label for="pets-final">Pets</label>
+          <input type="number" inputmode="numeric" id="pets-final" name="pets" min="0" max="10" placeholder="0">
         </div>
         <button type="submit" class="btn btn--sun">Verificar Disponibilidade</button>
       </form>
-      <p class="phone-plain">+55 67 99340-9398</p>
     </div>
 
     <footer class="footer">
@@ -378,13 +369,20 @@
         </div>
         <div class="footer__col">
           <p class="footer__heading">Contato</p>
-          <!-- Endereço exato a confirmar com o cliente antes de publicar. -->
-          <p class="footer__text">Aquidauana, MS — endereço a confirmar</p>
+          <p class="footer__text">R. João de Almeida Castro, 198 — Centro, Aquidauana - MS, 79200-000</p>
           <a href="https://wa.me/5567993409398?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20disponibilidade%20e%20valores%20no%20Hotel%20Beira%20Rio." target="_blank" rel="noopener">+55 67 99340-9398</a>
         </div>
         <div class="footer__col">
           <p class="footer__heading">Redes Sociais</p>
           <a href="https://instagram.com/hotelbeirarioaquidauana" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Desenvolvimento Web</p>
+          <a class="footer__markout-badge" href="https://wa.me/5567991729954?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Hotel%20Beira%20Rio%20e%20gostaria%20de%20saber%20mais%20sobre%20criar%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
+            <img src="assets/img/markout-logo.png" alt="Markout - desenvolvimento de sites" width="120" height="34">
+          </a>
+          <p class="footer__text">Quer um site assim para o seu negócio?</p>
+          <a class="btn btn--sun footer__markout-cta" href="https://wa.me/5567991729954?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Hotel%20Beira%20Rio%20e%20gostaria%20de%20saber%20mais%20sobre%20criar%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Entrar em Contato</a>
         </div>
       </div>
       <p class="footer__copy">© 2026 Hotel Beira Rio · Aquidauana, MS — Todos os direitos reservados</p>
@@ -398,15 +396,15 @@
       <div class="faq__list">
         <details>
           <summary>Como faço para reservar?</summary>
-          <p>Reservas são feitas diretamente pelo WhatsApp: (67) 99340-9398. Envie as datas desejadas e o tipo de quarto que prefere.</p>
+          <p>Reservas são feitas diretamente pelo WhatsApp. Envie as datas desejadas e o tipo de quarto que prefere.</p>
         </details>
         <details>
           <summary>O café da manhã está incluído?</summary>
           <p>Sim, todas as diárias já incluem café da manhã, sem custo extra.</p>
         </details>
         <details>
-          <summary>Vocês oferecem pacotes para pesca?</summary>
-          <p>Sim, temos o Pacote Pescador / Fim de Semana com 3 noites em quarto triplo por R$ 720.</p>
+          <summary>Posso levar meu pet?</summary>
+          <p>Sim, aceitamos pets mediante uma taxa de R$ 50 por pet, por estadia. Há regras de convivência a serem seguidas — consulte todos os detalhes pelo WhatsApp antes de reservar.</p>
         </details>
       </div>
     </div>
