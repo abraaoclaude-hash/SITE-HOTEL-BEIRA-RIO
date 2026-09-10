@@ -1,0 +1,9 @@
+.git
+.gitignore
+.wrangler
+node_modules
+package.json
+package-lock.json
+wrangler.toml
+.assetsignore
+assets/img/_backup-fotos-antigas
