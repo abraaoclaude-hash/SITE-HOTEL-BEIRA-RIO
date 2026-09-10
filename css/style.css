@@ -376,7 +376,7 @@ h1, h2, h3 {
 
 /* ---------- boas-vindas ---------- */
 .boas-vindas { text-align: center; padding: 48px 0; }
-.boas-vindas .lede { max-width: 1080px; margin: 0 auto; text-align: justify; text-align-last: center; }
+.boas-vindas .lede { max-width: 1280px; margin: 0 auto; text-align: justify; text-align-last: center; }
 
 /* ---------- photo-cta (full-bleed photo + centered CTA) ---------- */
 .photo-cta {
@@ -781,7 +781,7 @@ h1, h2, h3 {
 .cafe-block__content {
   position: relative;
   z-index: 2;
-  max-width: 1040px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
