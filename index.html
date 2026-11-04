@@ -93,11 +93,14 @@
   </section>
 
   <!-- ===== 3. FULL-BLEED PHOTO + CTA ===== -->
-  <section class="photo-cta">
-    <img src="assets/img/hero-araras.jpg" alt="Casal de araras-canindé em Aquidauana-MS, perto do Hotel Beira Rio" class="photo-cta__img" loading="lazy" width="1556" height="1011">
-    <div class="photo-cta__scrim"></div>
-    <div class="photo-cta__content reveal">
-      <a class="btn btn--frame" href="#acomodacoes">Ver Acomodações</a>
+  <section class="photo-cta araras-scroll" id="araras" data-frames="94">
+    <div class="araras-stage">
+      <img src="assets/araras/poster.jpg" alt="Casal de araras-canindé em Aquidauana-MS, perto do Hotel Beira Rio" class="photo-cta__img araras-poster" width="1280" height="720">
+      <canvas class="araras-canvas" aria-hidden="true"></canvas>
+      <div class="photo-cta__scrim"></div>
+      <div class="photo-cta__content araras-cta">
+        <a class="btn btn--frame" href="#acomodacoes">Ver Acomodações</a>
+      </div>
     </div>
   </section>
 
@@ -412,5 +415,6 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/araras.js"></script>
 </body>
 </html>
