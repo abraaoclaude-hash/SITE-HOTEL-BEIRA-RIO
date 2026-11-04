@@ -453,6 +453,16 @@ h1, h2, h3 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
+@media (min-width: 700px) and (max-width: 1099px) {
+  .rooms { grid-template-columns: repeat(6, 1fr); }
+  .rooms .room-card { grid-column: span 2; }
+  .rooms .room-card:nth-child(4) { grid-column: 2 / span 2; }
+}
+@media (min-width: 1100px) {
+  .rooms { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .rooms .room-card { padding: 24px 18px; }
+  .rooms .room-card h3 { min-height: 2.6em; }
+}
 .room-card {
   background: #fff;
   border-radius: var(--radius);
