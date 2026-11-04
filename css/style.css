@@ -486,6 +486,9 @@ h1, h2, h3 {
   margin: 0 0 .3em;
 }
 .room-card__price span { font-family: var(--font-body); font-size: .95rem; color: var(--ink-soft); }
+.room-card__photo { margin: .2em 0 1em; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; cursor: pointer; }
+.room-card__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.room-card__photo:hover img { transform: scale(1.05); }
 .room-card__desc { color: var(--ink-soft); font-size: .92rem; margin-bottom: 1.4em; }
 .room-card .btn { margin-top: auto; align-self: flex-start; }
 
